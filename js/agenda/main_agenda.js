@@ -41,7 +41,7 @@ function init_agenda(){
     
     var logoKinder = new logoKinderGirando();
     
-    logoKinder.init(492, 865, stage_agenda, canvas_agenda);
+    logoKinder.init(492, 840, stage_agenda, canvas_agenda);
     
         
     /***
