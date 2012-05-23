@@ -275,7 +275,7 @@ body{
 
 
 #contenedor #canvas_contacto {
-     background-image: url("../images/contacto/background_contacto3.jpg");
+     background-image: url("../images/contacto/background_contacto4.jpg");
      background-repeat: no-repeat; 
      background-position: center top;
      overflow: hidden;
@@ -331,7 +331,7 @@ body{
 }
 
 #contenedor #canvas_agenda {
-     background-image: url("../images/agenda/agendaBG2.jpg");
+     background-image: url("../images/agenda/agendaBG3.jpg");
      background-repeat: no-repeat;
      background-position: center top;
      overflow: hidden;
