@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /kinder
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ confi/Owen.php?url_fastdevel=$1 [QSA,L]
+RewriteRule ^$ confi/Owen.php?url_fastdevel=$1 [QSA,L]
+</IfModule>

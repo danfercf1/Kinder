@@ -1,0 +1,52 @@
+<br><br> echo('print_r($_SERVER); <br>====><br>');
+ Array
+(
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => localhost
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.24) Gecko/20111103 Firefox/3.6.24
+    [HTTP_ACCEPT] => */*
+    [HTTP_ACCEPT_LANGUAGE] => en-us,en;q=0.5
+    [HTTP_ACCEPT_ENCODING] => gzip,deflate
+    [HTTP_ACCEPT_CHARSET] => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+    [HTTP_KEEP_ALIVE] => 115
+    [HTTP_CONNECTION] => keep-alive
+    [CONTENT_TYPE] => application/x-www-form-urlencoded; charset=UTF-8
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_REFERER] => http://localhost/fastdevelphp/home/console
+    [CONTENT_LENGTH] => 34
+    [HTTP_COOKIE] => PHPSESSID=6329b77ddf88fcf33da692aa6f8bbb85
+    [HTTP_PRAGMA] => no-cache
+    [HTTP_CACHE_CONTROL] => no-cache
+    [PATH] => C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Archivos de programa\TortoiseGit\bin;C:\Archivos de programa\Git\cmd;C:\Archivos de programa\Subversion\bin
+    [SystemRoot] => C:\WINDOWS
+    [COMSPEC] => C:\WINDOWS\system32\cmd.exe
+    [PATHEXT] => .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH
+    [WINDIR] => C:\WINDOWS
+    [SERVER_SIGNATURE] => <address>Apache/2.2.8 (Win32) mod_ssl/2.2.8 OpenSSL/0.9.8g PHP/5.2.6 Server at localhost Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.2.8 (Win32) mod_ssl/2.2.8 OpenSSL/0.9.8g PHP/5.2.6
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 127.0.0.1
+    [DOCUMENT_ROOT] => D:/AppServ/www
+    [SERVER_ADMIN] => localhost
+    [SCRIPT_FILENAME] => D:/AppServ/www/fastdevelphp/confi/Owen.php
+    [REMOTE_PORT] => 1475
+    [REDIRECT_QUERY_STRING] => url_fastdevel=home/console
+    [REDIRECT_URL] => /fastdevelphp/home/console
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => POST
+    [QUERY_STRING] => url_fastdevel=home/console
+    [REQUEST_URI] => /fastdevelphp/home/console
+    [SCRIPT_NAME] => /fastdevelphp/confi/Owen.php
+    [PHP_SELF] => /fastdevelphp/confi/Owen.php
+    [REQUEST_TIME] => 1323448226
+    [argv] => Array
+        (
+            [0] => url_fastdevel=home/console
+        )
+
+    [argc] => 1
+)

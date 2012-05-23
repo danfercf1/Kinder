@@ -1,0 +1,746 @@
+body{
+    margin: 0;
+    /*overflow: hidden;*/
+    padding: 0;
+}
+
+/***
+****Estilos index
+***/
+
+
+#contenedor #canvas_home {
+    
+      background: url("../images/images_home/background_home2.jpg") no-repeat center top transparent;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+}
+
+#contenedor #canvas_museo {
+     background: url("../images/museo/background_museo2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+}
+
+#contenedor #canvas_juegos {
+     background: url("../images/juegos/background_juegos2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+}
+
+#contenedor #canvas_contacto {
+     background: url("../images/contacto/background_contacto2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+     /*display: none;*/
+}
+
+#contenedor #canvas_productos {
+     background: url("../images/productosf/background_productos2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+     /*display: none;*/
+}
+
+
+#contenedor #contenedor_productos #textarea{
+    background: none repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: Arial Rounded MT Bold;
+    font-size: 11px;
+    position: absolute;
+    border: none;
+}
+
+ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#link_productos{
+    background: url("../images/btn_menu/productos.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 150px;
+    position:absolute;
+}
+
+#link_contacto{
+    background: url("../images/btn_menu/contacto.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 120px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_coleccion{
+    background: url("../images/btn_menu/coleccion.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 172px;
+    position:absolute;
+    /*right: -30px;*/
+}
+
+.nav_menu_soy_chico #link_juegos{
+    background: url("../images/btn_menu/juegos.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 110px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_museo{
+    background: url("../images/btn_menu/museo.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 184px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_guardianes{
+    background: url("../images/btn_menu/btn_guardianes.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 158px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico{
+    position: fixed;
+    z-index: 9999;
+}
+
+.nav_menu_soy_chico li{
+   display:block;
+}
+
+.menu_soy{
+    position: fixed;
+    z-index: 9999;
+}
+
+.menu_soy #link_soypadre{
+    
+    display:block;
+    cursor: pointer;
+    
+}
+
+.menu_soy #link_soypadre span{
+    
+    display: block;
+    width: 151px;
+    height: 99px;
+}
+
+
+.soy_padre{
+    
+    background: url('../images/images_home/soy_padre.png') no-repeat center center transparent;
+    
+}
+
+.soy_chico{
+    
+    background: url('../images/images_home/soy_chico.png') no-repeat center center transparent;
+}
+
+#contenedor .contenedor_canvas{
+    /*height: 773px;*/
+    overflow: hidden;
+    /*position: absolute;*/
+    position: relative;
+}
+
+
+#overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:0.8;
+    /*background:rgba(255,255,255,0.8); or just this*/
+    z-index:50;
+    color:#fff;
+    display:none;
+}
+
+#overlay #iframe_registro{
+    height: 100%;
+    padding-left: 370px;
+    width: 100%;
+}
+
+/***
+****Estilos registro
+***/
+
+#content_registro{
+    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+}
+
+#content_registro #titulo{
+    
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 55px;
+    left: 158px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 115px;
+    
+}
+
+#content_registro #form_registro #lista_formulario{
+    overflow: hidden;
+    padding: 30px 60px 0 0;
+    text-align: right;
+}
+
+#content_registro #form_registro #lista_formulario li{
+    margin: 0 0 8px 10px;
+    overflow: hidden;
+}
+
+#content_registro #form_registro #lista_formulario label{
+    
+    background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+#content_registro #form_registro #lista_formulario input{
+    
+    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    border: medium none;
+    color: #333333;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    height: 34px;
+    padding: 0 20px 0 30px;
+}
+
+.boton_registro{
+    background: url("../images/registro/btn_enter.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 80px;
+    left: 515px;
+    position: absolute;
+    top: 452px;
+    width: 82px;
+}
+
+/***
+****Estilos Fancybox
+***/
+
+#fancybox-outer {
+    background: none repeat scroll 0 0 transparent;
+}
+
+#fancybox-content {
+    border: none;
+}
+
+#fancybox-close {
+    background: url("../images/registro/cerrar.png") no-repeat scroll center center transparent;
+    height: 51px;
+    right: 75px;
+    top: 44px;
+    width: 39px;
+    z-index: 1103;
+}
+
+/***
+****Estilos Login
+***/
+
+#content_login{
+    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+}
+
+#content_login #titulo{
+    
+    color: #2ed2d4;
+    font-family: Arial Rounded MT Bold;
+    font-size: 55px;
+    left: 240px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 115px;
+    
+}
+
+#content_login #form_login #lista_formulario{
+    overflow: hidden;
+    padding: 30px 60px 0 160px;
+}
+
+#content_login #form_login #lista_formulario li{
+    margin: 0 0 8px 10px;
+    overflow: hidden;
+}
+
+#content_login #form_login #lista_formulario label{
+    
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 36px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+#content_login #form_login #lista_formulario input{
+    
+    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    border: medium none;
+    color: #333333;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    height: 34px;
+    padding: 0 20px 0 30px;
+}
+
+#content_login #form_login .links{
+ 
+    background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
+    color: #F8442B;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    margin-left: 188px;
+    padding: 0 0 0 24px;
+    cursor: pointer;
+}
+
+
+/***
+****Estilos Gracias
+***/
+
+#content_gracias{
+    
+    background: url("../images/registro/background_gracias.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+    
+}
+
+#content_gracias #titulo{
+    
+    color: #FFCC02;
+    font-family: Arial Rounded MT Bold;
+    font-size: 41px;
+    left: 73px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 123px;
+    
+}
+
+#content_gracias article{
+    
+    padding: 42px 0 0 81px;
+    width: 445px;
+    
+}
+
+#content_gracias article p{
+    
+    background: url("../images/registro/flecha.png") no-repeat scroll 12% 10% transparent;
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 36px;
+    text-align: center;
+    
+}
+
+.error_registro{
+    
+    bottom: 55px;
+    color: #FF0000;
+    font-family: Arial Rounded MT Bold;
+    font-size: 25px;
+    font-weight: bold;
+    left: 182px;
+    position: absolute;
+}
+
+/***
+****Estilos IPAD confirmacion
+***/
+
+#content_confirmacion{
+    
+    background: url("../images/registro/confirmar/background2.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 1253px;
+    overflow: hidden;
+    padding: 0 0 0 255px;
+    width: 1000px;
+    float: left;
+    margin-top: 45px;
+    margin-left: 80px;
+}
+
+.fondo_ipad{
+    background: url("../images/registro/confirmar/fondo-ipad2.jpg") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 1285px;
+    margin-left: -18px;
+    overflow: hidden;
+    padding-top: 0;
+    width: 781px;
+}
+
+#content_confirmacion .datos_texto{
+    color: #DC3E00;
+    font-family: Arial Rounded MT Bold;
+}
+
+
+#content_confirmacion #login{
+    background: url("../images/registro/confirmar/logo.png") no-repeat scroll 4% 99% transparent;
+    float: left;
+    margin-bottom: 10px;
+    padding: 190px 0 0 225px;
+}
+
+#content_confirmacion #login span{
+    font-family: Bold;
+    font-size: 10px;
+    margin-left: 134px;
+}
+
+#content_confirmacion .input_login{
+    background: url("../images/registro/confirmar/background-input1.png") repeat-x scroll center center transparent;
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-family: Arial Rounded MT Bold;
+    height: 22px;
+    box-shadow: 0 0 3px #888888;
+}
+
+#content_confirmacion .input_login_general {
+    border: 1px solid #B2B3B4;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    padding: 2px 3px;
+    font-family: Arial Rounded MT Bold;
+    box-shadow: 0 0 3px #888888;
+}
+
+#content_confirmacion #login #btn_login{
+    background: url("../images/registro/confirmar/background_buttongo.png") repeat-x scroll center center transparent;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    cursor:  pointer;
+    border: 1px solid #B2B3B4;
+}
+
+#content_confirmacion #login #btn_registrarse{
+    background: url("../images/registro/confirmar/background-input-red2.png") repeat-x scroll center center transparent;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #F23300;
+    font-family: Arial Rounded MT Bold;
+    width: 135px;
+    cursor:  pointer;
+    border: 1px solid #BE7D74;
+    height: 25px;
+    
+}
+
+#content_confirmacion .titulo_principal{
+    float: left;
+    font-family: Arial Rounded MT Bold;
+    font-size: 13px;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+
+#content_confirmacion H2{
+    float: left;
+    font-family: Arial Rounded MT Bold;
+    font-size: 13px;
+    margin-left: 22px;
+    padding-left: 15px;
+}
+
+#content_confirmacion #datos_menor{
+    float: left;
+    margin-top: 5px;
+    padding: 0 0 0 30px;
+    width: 100%;
+}
+
+#content_confirmacion #datos_menor ul{
+    
+}
+
+#content_confirmacion #datos_menor ul li{
+    margin: 5px 0;
+}
+
+#content_confirmacion #datos_menor h3{
+    
+}
+
+#content_confirmacion #datos_padres{
+    float: left;
+    margin-top: 45px;
+    padding-left: 30px;
+}
+
+#content_confirmacion #datos_padres ul{
+    
+}
+
+#content_confirmacion #datos_padres ul li{
+    margin: 5px 0;
+}
+
+#content_confirmacion #informe_legal{
+   float: left;
+   width: 735px;
+}
+
+#content_confirmacion #informe_legal p{
+    color: #41413D;
+    font-family: Arial Rounded MT Bold;
+    font-size: 11px;
+    padding-left: 30px;
+    text-align: justify;
+}
+
+@-moz-document url-prefix() {
+	#content_confirmacion #informe_legal p{
+	   font-size: 12px;
+	}
+} 
+
+
+#content_confirmacion #informe_legal textarea{
+    height: 90px;
+    margin: 0 0 0 30px;
+    width: 700px;
+    resize: none;
+}
+
+#content_confirmacion #informe_legal label{
+    margin-right: 120px;
+}
+
+#content_confirmacion #informe_legal .radios{
+    margin-left: 105px;
+}
+
+.botones_formulario{
+    float: left;
+    margin-top: 30px;
+    text-align: right;
+    width: 735px;
+}
+
+.botones_formulario button{ 
+    background: url("../images/registro/confirmar/background_button2.png") repeat-x scroll center center transparent;
+    border: 2px solid #A0ADB5;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    color: #dc3e00;
+    font-family: Arial Rounded MT Bold;
+    cursor: pointer;
+    margin-right: 20px;
+    /*box-shadow: 0 0 3px #888888;*/
+}
+
+/***FIN confirmacion***/
+
+
+/***Contacto***/
+
+#formulario_contacto{
+    position: absolute;
+}
+
+section form#form_contacto 
+{
+    display: block;
+}
+
+section  form#form_contacto div,
+section form#form_contacto div div.fondo_interno,
+section form#form_contacto   div div.fondo_interno div.fondito_externo,
+section form#form_contacto  div div.fondo_interno div.fondito_externo div.fondito_interno
+  {
+    background-repeat: no-repeat;
+  }
+
+
+
+section form#form_contacto div
+{ 
+   background-image: url("../images/contacto/formulario/fondo_externo.png");
+    height: 311px;
+    left: 30%;
+    position: absolute;
+    top: 20%;
+    width: 414px;
+}
+section form#form_contacto div div.fondo_interno
+{
+        background-image: url("../images/contacto/formulario/fondo_interno.png");                   
+        height: 295px;
+        left: 10px;
+        position: absolute;
+        top: 8px;
+        width: 394px;
+}
+
+section form#form_contacto div div.fondo_interno label
+{
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+     
+}            
+section form#form_contacto div div.fondo_interno label.lbl_mensaje
+{
+    left: 38%;
+    top: 41%;
+} 
+
+section form#form_contacto  div div.fondo_interno div.fondito_externo          
+{
+       background-image: url("../images/contacto/formulario/fondito_externo.png");
+height: 137px;
+left: 14%;
+position: absolute;
+top: 44%;
+width: 282px;
+}
+
+
+section  form#form_contacto div div.fondo_interno div.fondito_externo div.fondito_interno
+{
+    background-image: url("../images/contacto/formulario/fondito_interno.png");
+    height: 116px;
+    left: 11px;
+    position: absolute;
+    top: 10px;
+    width: 259px;      
+}
+section  form#form_contacto div div.fondo_interno div.fondito_externo div.fondito_interno textarea#txa_texto
+{
+    border-radius: 15px 15px 15px 15px;
+    height: 86px;
+    left: 11px;
+    position: absolute;
+    top: 10px;
+    width: 229px;
+    background-color: #EDEDED;
+}
+
+section  form#form_contacto div div.fondo_interno  input#form_contacto_nom_ap,
+section  form#form_contacto div div.fondo_interno  input#form_contacto_email
+
+{
+    background-color: #D56213;
+    border: medium none;
+    border-radius: 8px 8px 8px 8px;
+    height: 14px;
+    left: 24%;
+    position: absolute;                
+    width: 188px;
+    padding-left: 5px;
+    text-align: left;
+}
+section  form#form_contacto div div.fondo_interno  input#form_contacto_nom_ap
+{
+    top: 19%;
+}            
+section  form#form_contacto div div.fondo_interno  input#form_contacto_email
+{   
+       top: 31%;
+}
+
+section form#form_contacto div div.fondo_interno label.lbl_nom_ap
+{
+  
+   left: 31%;
+top: 13%;
+} 
+section form#form_contacto div div.fondo_interno label.lbl_email
+{
+  left: 44%;
+top: 26%;
+}              
+            
+section form#form_contacto input#btn_send
+{
+    background-image: url("../images/contacto/formulario/btn_send.png");
+    border: medium none;
+    border-radius: 10px 10px 10px 10px;
+    height: 33px;
+    left: 71%;
+    position: absolute;
+    top: 87%;
+    width: 49px;
+    cursor: pointer;
+}
+
+
+
+/***Informacion Nutricional***/
+
+#content_nutricional{
+    background: url("../images/nutricional/KINDER-CHOCOLATE-IPAD.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 789px;
+    overflow: hidden;
+    width: 691px;
+}
+
+#content_nutricional #imagen_centro{
+    height: 548px;
+    padding: 245px 0 0 230px;
+    width: 451px;
+}
+
+#content_nutricional #imagen_centro .error_ipad{
+    color: #FFFFFF;
+    font-family: Arial Rounded MT Bold;
+    padding: 25px;
+    position: relative;
+    width: 200px;
+}
+
+    

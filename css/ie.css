@@ -1,0 +1,47 @@
+#fancybox-wrap {
+   
+}
+
+#fancybox-outer{
+}
+
+#fancybox-content{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media screen and (device-height: 600px){
+    
+    .anchor_posicion{
+        
+        position: absolute;
+        top: 42%;
+        z-index: 99999;
+    }
+}
+
+
+@media screen and (device-height: 768px){
+    
+    .anchor_posicion{
+        
+        position: absolute;
+        top: 32%;
+        z-index: 99999;
+    }
+}
+
+@media screen and (device-height: 900px){
+    
+    .anchor_posicion{
+        
+        position: absolute;
+        top: 15%;
+        z-index: 99999;
+    }
+}
+
+
+
+
+

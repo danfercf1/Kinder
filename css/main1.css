@@ -1,0 +1,414 @@
+body{
+    margin: 0;
+    /*overflow: hidden;*/
+    padding: 0;
+}
+
+/***
+****Estilos index
+***/
+
+
+#contenedor #canvas_home {
+    
+      background: url("../images/images_home/background_home2.jpg") no-repeat center top transparent;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+}
+
+#contenedor #canvas_museo {
+     background: url("../images/museo/background_museo2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+}
+
+#contenedor #canvas_juegos {
+     background: url("../images/juegos/background_juegos2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+}
+
+#contenedor #canvas_contacto {
+     background: url("../images/contacto/background_contacto2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+     /*display: none;*/
+}
+
+#contenedor #canvas_productos {
+     background: url("../images/productosf/background_productos2.jpg") no-repeat center top transparent;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+     /*display: none;*/
+}
+
+
+#contenedor #contenedor_productos #textarea{
+    background: none repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: Arial Rounded MT Bold;
+    font-size: 11px;
+    position: absolute;
+    border: none;
+}
+
+ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#link_productos{
+    background: url("../images/btn_menu/productos.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 150px;
+    position:absolute;
+}
+
+#link_contacto{
+    background: url("../images/btn_menu/contacto.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 120px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_coleccion{
+    background: url("../images/btn_menu/coleccion.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 172px;
+    position:absolute;
+    /*right: -30px;*/
+}
+
+.nav_menu_soy_chico #link_juegos{
+    background: url("../images/btn_menu/juegos.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 110px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_museo{
+    background: url("../images/btn_menu/museo.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 184px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_guardianes{
+    background: url("../images/btn_menu/btn_guardianes.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 158px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico{
+    position: fixed;
+    z-index: 9999;
+}
+
+.nav_menu_soy_chico li{
+   display:block;
+}
+
+.menu_soy{
+    position: fixed;
+    z-index: 9999;
+}
+
+.menu_soy #link_soypadre{
+    
+    display:block;
+    cursor: pointer;
+    
+}
+
+.menu_soy #link_soypadre span{
+    
+    display: block;
+    width: 151px;
+    height: 99px;
+}
+
+
+.soy_padre{
+    
+    background: url('../images/images_home/soy_padre.png') no-repeat center center transparent;
+    
+}
+
+.soy_chico{
+    
+    background: url('../images/images_home/soy_chico.png') no-repeat center center transparent;
+}
+
+#contenedor .contenedor_canvas{
+    /*height: 773px;*/
+    overflow: hidden;
+    /*position: absolute;*/
+    position: relative;
+}
+
+
+#overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:0.8;
+    /*background:rgba(255,255,255,0.8); or just this*/
+    z-index:50;
+    color:#fff;
+    display:none;
+}
+
+#overlay #iframe_registro{
+    height: 100%;
+    padding-left: 370px;
+    width: 100%;
+}
+
+/***
+****Estilos registro
+***/
+
+#content_registro{
+    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+}
+
+#content_registro #titulo{
+    
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 55px;
+    left: 158px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 115px;
+    
+}
+
+#content_registro #form_registro #lista_formulario{
+    overflow: hidden;
+    padding: 30px 60px 0 0;
+    text-align: right;
+}
+
+#content_registro #form_registro #lista_formulario li{
+    margin: 0 0 8px 10px;
+    overflow: hidden;
+}
+
+#content_registro #form_registro #lista_formulario label{
+    
+    background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+#content_registro #form_registro #lista_formulario input{
+    
+    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    border: medium none;
+    color: #333333;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    height: 34px;
+    padding: 0 20px 0 30px;
+}
+
+.boton_registro{
+    background: url("../images/registro/btn_enter.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 80px;
+    left: 515px;
+    position: absolute;
+    top: 452px;
+    width: 82px;
+}
+
+/***
+****Estilos Fancybox
+***/
+
+#fancybox-outer {
+    background: none repeat scroll 0 0 transparent;
+}
+
+#fancybox-content {
+    border: none;
+}
+
+#fancybox-close {
+    background: url("../images/registro/cerrar.png") no-repeat scroll center center transparent;
+    height: 51px;
+    right: 75px;
+    top: 44px;
+    width: 39px;
+    z-index: 1103;
+}
+
+/***
+****Estilos Login
+***/
+
+#content_login{
+    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+}
+
+#content_login #titulo{
+    
+    color: #2ed2d4;
+    font-family: Arial Rounded MT Bold;
+    font-size: 55px;
+    left: 240px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 115px;
+    
+}
+
+#content_login #form_login #lista_formulario{
+    overflow: hidden;
+    padding: 30px 60px 0 160px;
+}
+
+#content_login #form_login #lista_formulario li{
+    margin: 0 0 8px 10px;
+    overflow: hidden;
+}
+
+#content_login #form_login #lista_formulario label{
+    
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 36px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+#content_login #form_login #lista_formulario input{
+    
+    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    border: medium none;
+    color: #333333;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    height: 34px;
+    padding: 0 20px 0 30px;
+}
+
+#content_login #form_login .links{
+ 
+    background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
+    color: #F8442B;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    margin-left: 188px;
+    padding: 0 0 0 24px;
+    cursor: pointer;
+}
+
+
+/***
+****Estilos Gracias
+***/
+
+#content_gracias{
+    
+    background: url("../images/registro/background_gracias.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+    
+}
+
+#content_gracias #titulo{
+    
+    color: #FFCC02;
+    font-family: Arial Rounded MT Bold;
+    font-size: 41px;
+    left: 73px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 123px;
+    
+}
+
+#content_gracias article{
+    
+    padding: 42px 0 0 81px;
+    width: 445px;
+    
+}
+
+#content_gracias article p{
+    
+    background: url("../images/registro/flecha.png") no-repeat scroll 12% 10% transparent;
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 36px;
+    text-align: center;
+    
+}
+
+.error_registro{
+    
+    bottom: 55px;
+    color: #FF0000;
+    font-family: Arial Rounded MT Bold;
+    font-size: 25px;
+    font-weight: bold;
+    left: 182px;
+    position: absolute;
+}
+
+/***Informacion Nutricional***/
+
+#content_nutricional{
+    background: url("../images/nutricional/KINDER-CHOCOLATE-IPAD.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 789px;
+    overflow: hidden;
+    width: 691px;
+}
+
+#content_nutricional #imagen_centro{
+    height: 548px;
+    padding: 245px 0 0 230px;
+    width: 451px;
+}
+
+#content_nutricional #imagen_centro .error_ipad{
+    color: #FFFFFF;
+    font-family: Arial Rounded MT Bold;
+    padding: 25px;
+    position: relative;
+    width: 200px;
+}
+
+    

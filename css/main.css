@@ -1,0 +1,1255 @@
+@font-face {
+	font-family: 'Futura';
+	src: url('fonts/FuturaLightBT.eot#') format('eot'),
+	     url('fonts/FuturaLightBT.ttf')  format('truetype'),
+         url('fonts/FuturaLightBT.woff')  format('woff'),
+         url('fonts/FuturaLightBT.otf')  format('otf');
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+	font-family: 'Futura Bold';
+	src: url('fonts/FuturaLightBT.eot#') format('eot'),
+	     url('fonts/FuturaBold.ttf')  format('truetype')
+         url('fonts/FuturaBold.woff')  format('woff'),
+         url('fonts/FuturaBold.otf')  format('otf'),
+         url('fonts/FuturaBold.svg')  format('svg');
+    font-weight: 800;
+    font-style: normal; 
+}
+
+body{
+    margin: 0;
+    /*overflow-y: hidden;*/
+}
+
+/***
+****Estilos index
+***/
+#qLoverlay{
+    /*background-color: #01B9C3;*/
+    /*background-image: url("../images/preload/preload2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;*/
+    background: #02B7C2;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 666999;
+    overflow: hidden;
+}
+
+.nube10{
+    background-image: url("../images/preload/nube10.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 86px;
+    left: 0;
+    position: absolute;
+    top: 45%;
+    width: 90px;
+    z-index: 999999;
+}
+
+.nube20{
+    background-image: url("../images/preload/nube20.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 54px;
+    left: 9%;
+    position: absolute;
+    top: 45%;
+    width: 80px;
+    z-index: 999999;
+}
+
+.nube30{
+    background-image: url("../images/preload/nube30.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 62px;
+    left: 18%;
+    position: absolute;
+    top: 45%;
+    width: 74px;
+    z-index: 999999;
+}
+.nube40{
+    background-image: url("../images/preload/nube40.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 52px;
+    left: 27%;
+    position: absolute;
+    top: 45%;
+    width: 80px;
+    z-index: 999999;
+}
+.nube50{
+    background-image: url("../images/preload/nube50.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 53px;
+    left: 36%;
+    position: absolute;
+    top: 45%;
+    width: 71px;
+    z-index: 999999;
+}
+.nube60{
+    background-image: url("../images/preload/nube60.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 52px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 80px;
+    z-index: 999999;
+}
+.nube70{
+    background-image: url("../images/preload/nube70.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 76px;
+    left: 54%;
+    position: absolute;
+    top: 45%;
+    width: 80px;
+    z-index: 999999;
+}
+.nube80{
+    background-image: url("../images/preload/nube80.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 56px;
+    left: 63%;
+    position: absolute;
+    top: 45%;
+    width: 83px;
+    z-index: 999999;
+}
+.nube90{
+    background-image: url("../images/preload/nube90.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 57px;
+    left: 72%;
+    position: absolute;
+    top: 45%;
+    width: 68px;
+    z-index: 999999;
+}
+
+.nube100{
+    background-image: url("../images/preload/nube100.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 63px;
+    left: 81%;
+    position: absolute;
+    top: 45%;
+    width: 80px;
+    z-index: 999999;
+}
+
+.preloader_avion{
+    background-image: url("../images/preload/avioncito_preload.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 77px;
+    left: -10%;
+    position: relative;
+    top: 40%;
+    width: 80px;
+    z-index: 999999;
+    /*display: none;*/
+}
+
+
+#contenedor #canvas_home {
+    
+      background-image: url("../images/images_home/background_home2.jpg"); 
+      background-repeat: no-repeat;
+      background-position: center top;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+}
+
+#contenedor #contenedor_home #nombre_usuario{
+      
+      left: 60%;
+      position: absolute;
+      top: 83%;
+      z-index: 99999;
+      display: none;
+}
+
+
+
+#contenedor #contenedor_verde .iframe_juego{
+        
+    border: medium none;
+    height: 448px;
+    left: 380px;
+    position: absolute;
+    top: 350px;
+    width: 590px;
+    z-index: 99999;
+} 
+
+#contenedor #canvas_verde {
+    
+      background: url("../images/verde/background_mundo_verde2.jpg") no-repeat center top transparent;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+}
+
+#contenedor #canvas_azul {
+    
+      background: url("../images/azul/background_mundo_azul.jpg") no-repeat center top transparent;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+}
+
+
+#contenedor #canvas_museo {
+     background-image: url("../images/museo/background_museo2.jpg"); 
+     background-repeat: no-repeat; 
+     background-position: center top;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+}
+
+#contenedor #canvas_juegos {
+     background-image: url("../images/juegos/background_juegos2.jpg"); 
+     background-repeat: no-repeat; 
+     background-position: center top;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+}
+
+#contenedor #contenedor_juegos{
+    
+    height: 1080px;
+    
+}
+
+#contenedor #contenedor_juegos #terminos_condiciones{
+    bottom: 80px;
+    color: #F04731;
+    cursor: pointer;
+    font-family: Arial Rounded MT Bold;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    z-index: 99999;
+}
+
+#contenedor #contenedor_juegos #terminos_condiciones .term_cond{
+    text-decoration: none;
+}
+
+
+
+
+#contenedor #canvas_contacto {
+     background-image: url("../images/contacto/background_contacto3.jpg");
+     background-repeat: no-repeat; 
+     background-position: center top;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+     
+}
+
+#contenedor #canvas_productos {
+     background-image: url("../images/productosf/background_productos3.jpg");
+     background-repeat: no-repeat;
+     background-position: center top;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+     
+}
+
+
+#contenedor #contenedor_productos #descripcion_producto{
+    background: none repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: Arial Rounded MT Bold;
+    font-size: 11px;
+    position: absolute;
+    border: none;
+    overflow: hidden;
+    text-align: justify;
+    resize: none;
+}
+
+
+
+.scroll-pane {
+    width: 100%;
+	height: 70px;
+	overflow: auto;
+}
+
+#contenedor #contenedor_productos #descripcion_producto p{
+    margin: 1px;
+}
+
+#popup_productos{
+    background-image: url("../images/productosf/POPUP-PADRES-FLATTEN.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 522px;
+    overflow: hidden;
+    width: 580px;
+    
+}
+
+#contenedor #canvas_agenda {
+     background-image: url("../images/agenda/agendaBG2.jpg");
+     background-repeat: no-repeat;
+     background-position: center top;
+     overflow: hidden;
+     position: relative;
+     z-index: 2;
+     
+}
+
+#contenedor #contenedor_agenda #calendario{
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-family: Futura;
+    position: absolute;
+    top: 363px;
+    width: 661px;
+    z-index: 2;
+}
+
+
+/**Estilos Calendario**/
+
+#contenedor #contenedor_agenda #calendario .fc-header{
+    background: none repeat scroll 0 0 #E9E9E9;
+    border: 2px solid #CDD2DA;
+}
+
+#contenedor #contenedor_agenda #calendario .fc-header .fc-header-left h2{
+    margin: 0;
+    color: #EB3D27;
+    font-family: Futura Bold;
+}
+
+#contenedor #contenedor_agenda #calendario .fc-header .fc-header-right .fc-button{
+    margin: 0;
+}
+#contenedor #contenedor_agenda #calendario .fc-header .fc-header-left .fc-header-title{
+    padding-left: 8px;
+}
+
+.fc-day-number{
+    float: left !important;
+    font-size: 10px;
+}
+
+/*
+.fc-state-highlight{
+    background: none repeat scroll 0 0 #FFF0D8;
+    border: 2px solid #F9A27B !important;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.fc-corner-right .fc-event-inner{
+    border-right-width: 0px;
+}
+
+.fc-corner-left .fc-event-inner{
+    border-right-width: 0px;
+}
+*/
+.fc-event-skin{
+    background: none scroll 0 0 transparent;
+    border: medium none;
+    color: #8f8f8f;
+}
+
+.fc-event-inner {
+    padding: 15px 0 0 9px;
+}
+
+.fc-corner-left {
+    margin-left: 0;
+}
+
+#contenedor #contenedor_agenda #calendario .fc-content .fc-view .fc-border-separate thead{
+    background: none repeat scroll 0 0 #E9E9E9;
+    font-family: Futura;
+}
+
+/**Estilo Evento calendario**/
+
+.evento_calendario{
+    background: url("../images/agenda/popupEvent.png") no-repeat scroll 0 0 transparent;
+    border: 1px solid orange;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -wekbit-border-radius: 5px 5px 5px 5px;
+    display: block;
+    font-size: 12px;
+    height: 50px;
+    margin-top: -16px;
+    padding-left: 11px;
+    width: 77px !important;
+}
+
+/**Estilos Popup Evento**/
+#content_evento{
+    background: url("../images/agenda/popup_descr.png") no-repeat scroll 0 0 transparent;
+    width: 442px;
+    height: 364px;
+}
+
+#content_evento .contenedor_descripcion{
+    display: block;
+    font-family: Arial Rounded MT;
+    height: 290px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 22px;
+    padding-top: 20px;
+    width: 300px;
+}
+
+#content_evento .contenedor_descripcion .header{
+    color: #FFFFFF;
+    font-size: 23px;
+    height: 100px;
+}
+
+#content_evento .contenedor_descripcion .descripcion_evento{
+    color: #896F3C;
+    font-size: 15px;
+    /*height: 200px;*/
+    text-align: justify;
+    width: 280px;
+}
+
+#content_evento .contenedor_descripcion .scroll-pane {
+    height: 160px;
+    overflow: auto;
+    width: 100%;
+}
+
+#content_evento .contenedor_descripcion .jspTrack {
+    background: url("../images/agenda/bgBtnEvent.png") repeat-y scroll 0 0 transparent;
+    width: 10px;
+    position: relative;
+}
+
+#content_evento .contenedor_descripcion .jspDrag {
+    background: url("../images/agenda/btnEvent.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    left: -4px;
+    position: relative;
+    top: 0;
+    width: 16px;
+    height: 30px;
+}
+
+#content_evento .contenedor_descripcion .jspVerticalBar {
+    width: 13px;
+}
+
+/**Fin estilos Popup Evento**/
+
+ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#link_productos{
+    background: url("../images/btn_menu/productos.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 150px;
+    position:absolute;
+}
+
+#link_contacto{
+    background: url("../images/btn_menu/contacto.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 120px;
+    position:absolute;
+}
+
+#link_agenda{
+    background: url("../images/btn_menu/agenda.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 182px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_coleccion{
+    background: url("../images/btn_menu/coleccion.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 172px;
+    position:absolute;
+    /*right: -30px;*/
+}
+
+.nav_menu_soy_chico #link_verde{
+    background: url("../images/btn_menu/verde.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 241px;
+    position:absolute;
+    /*right: -30px;*/
+}
+
+.nav_menu_soy_chico #link_azul{
+    background: url("../images/btn_menu/azul.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 224px;
+    position:absolute;
+    /*right: -30px;*/
+}
+
+.nav_menu_soy_chico #link_juegos{
+    background: url("../images/btn_menu/juegos.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 151px;
+    position:absolute;
+}
+
+.nav_menu_soy_chico #link_museo{
+    background: url("../images/btn_menu/museo.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    width: 184px;
+    position:absolute;
+}
+
+
+.nav_menu_soy_chico{
+    position: fixed;
+    z-index: 1100;
+}
+
+.nav_menu_soy_chico li{
+   display:block;
+}
+
+.menu_soy{
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    left: 20px;
+}
+
+.menu_soy #link_soypadre{
+    
+    display:block;
+    cursor: pointer;
+    
+}
+
+.menu_soy #link_soypadre span{
+    
+    display: block;
+    width: 151px;
+    height: 125px;
+}
+
+
+.soy_padre{
+    
+    background: url('../images/images_home/soy_padre.png') no-repeat center center transparent;
+    
+}
+
+.soy_chico{
+    
+    background: url('../images/images_home/soy_chico.png') no-repeat center center transparent;
+}
+
+#contenedor .contenedor_canvas{
+    /*height: 773px;*/
+    overflow: hidden;
+    /*position: absolute;*/
+    position: relative;
+}
+
+
+#overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:0.8;
+    /*background:rgba(255,255,255,0.8); or just this*/
+    z-index:50;
+    color:#fff;
+    display:none;
+}
+
+#overlay #iframe_registro{
+    height: 100%;
+    padding-left: 370px;
+    width: 100%;
+}
+
+/***
+****Estilos registro
+***/
+
+#content_registro{
+    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    /*display: inline-block;*/
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+}
+
+#content_registro #titulo{
+    
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 38px;
+    left: 204px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333;
+    top: 162px;
+    
+}
+
+#content_registro #form_registro #lista_formulario{
+    overflow: hidden;
+    padding: 38px 144px 0 0;
+    text-align: right;
+}
+
+#content_registro #form_registro #lista_formulario li{
+    margin: 0 0 8px 10px;
+    overflow: hidden;
+}
+
+#content_registro #form_registro #lista_formulario .etiqueta_flecha{
+    
+    background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-right: 5px;
+}
+
+
+#content_registro #form_registro #lista_formulario input{
+    
+    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    border: medium none;
+    border-radius: 35px 35px 35px 35px;
+    color: #333333;
+    font-family: Arial Rounded MT Bold;
+    font-size: 12px;
+    height: 25px;
+    padding: 0 12px;
+    width: 135px;
+}
+
+.boton_registro{
+    background: url("../images/registro/btn_enter.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 57px;
+    left: 453px;
+    position: absolute;
+    top: 394px;
+    width: 59px;
+}
+
+/***
+****Estilos Fancybox
+***/
+
+#fancybox-outer {
+    background: none repeat scroll 0 0 transparent;
+}
+
+#fancybox-content {
+    border: none;
+}
+
+#fancybox-close {
+    background: url("../images/registro/cerrar.png") no-repeat scroll center center transparent;
+    height: 37px;
+    right: 150px;
+    top: 108px;
+    width: 33px;
+    z-index: 1103;
+}
+
+/***
+****Estilos Login
+***/
+
+#content_login{
+    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    height: 340px;
+    overflow: hidden;
+    padding: 200px 0 0;
+    width: 610px;
+}
+
+#content_login #titulo{
+    
+    color: #2ED2D4;
+    font-family: Arial Rounded MT Bold;
+    font-size: 38px;
+    left: 260px;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 160px;
+    
+}
+
+#content_login #form_login #lista_formulario{
+    overflow: hidden;
+    padding: 38px 60px 0 194px;
+}
+
+#content_login #form_login #lista_formulario li{
+    margin: 0 0 8px 10px;
+    overflow: hidden;
+}
+
+#content_login #form_login #lista_formulario label{
+    
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+#content_login #form_login #lista_formulario input{
+    
+    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    border: medium none;
+    border-radius: 23px 23px 23px 23px;
+    moz-border-radius: 23px 23px 23px 23px;
+    webkit-border-radius: 23px 23px 23px 23px;
+    color: #333333;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    height: 30px;
+    margin-left: 18px;
+    padding: 0 10px;
+    width: 165px;
+}
+
+#content_login #form_login .links{
+ 
+    background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
+    color: #F8442B;
+    cursor: pointer;
+    font-family: Arial Rounded MT Bold;
+    font-size: 13px;
+    margin-left: 224px;
+    padding: 0 0 0 24px;
+}
+
+
+.boton_registrolog {
+    background: url("../images/registro/btn_enter.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 57px;
+    left: 358px;
+    position: absolute;
+    top: 316px;
+    width: 59px;
+}
+
+#content_login .login_correcto{
+    
+}
+
+/***
+****Estilos Gracias
+***/
+
+#content_gracias{
+    
+    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    height: 379px;
+    margin-left: 176px;
+    overflow: hidden;
+    padding: 158px 0 0 6px;
+    width: 428px;
+    
+}
+
+#content_gracias .titulo_grande{
+    
+    color: #FFCC02;
+    font-family: Arial Rounded MT Bold;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333;
+    top: 168px;
+    left: 345px;
+       
+}
+
+#content_gracias .titulo_pequeno{
+    color: #FFCC02;
+    font-family: Arial Rounded MT Bold;
+    font-weight: bold;
+    position: absolute;
+    text-shadow: 0.05em 0.05em 0.05em #333;
+    top: 181px;
+    left: 287px;
+    font-size: 17px;
+       
+}
+
+
+#content_gracias article{
+    
+    padding: 86px 0 0 52px;
+    width: 314px;
+    
+}
+
+#content_gracias article p{
+    
+    background: url("../images/registro/flecha.png") no-repeat scroll 12% center transparent;
+    color: #08A8C0;
+    font-family: Arial Rounded MT Bold;
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+#content_gracias article .flecha_top{
+    background: url("../images/registro/flecha.png") no-repeat scroll 12% 10% transparent;
+}
+
+.error_registro{
+    
+    bottom: 87px;
+    color: #FF0000;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    font-weight: bold;
+    left: 200px;
+    position: absolute;
+}
+
+/***
+****Estilos IPAD confirmacion
+***/
+
+.texto_rojo{
+    color: #DC3E00;
+    font-size: 9.5pt;
+    width: 170px;
+    display: inline-block;
+}
+
+.class_input{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B2B3B4;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    height: 25px;
+    box-shadow: 0 0 3px #888888;
+    padding: 0 10px;
+    width: 135px;
+}
+
+section#content_confirmacion{
+    background: url("../images/registro/confirmar/registro_padresBG1.png") no-repeat scroll 0 0 transparent;
+    height: 1131px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 100px 0 0;
+    width: 887px;
+    
+}
+
+#content_confirmacion .fondo_ipad{
+    background: url("../images/registro/confirmar/registro_padresBG2.jpg") no-repeat scroll 0 0 transparent;
+    height: 923px;
+    margin: 0 auto;
+    width: 696px;
+    position: relative;
+    font-family: Arial Rounded MT Bold;
+}
+
+#content_confirmacion .fondo_ipad .datos{
+    padding: 115px 20px 0;
+}
+
+#content_confirmacion .fondo_ipad .datos .titulo_principal{
+    font-size: 13pt;
+    text-align: center;
+}
+
+#content_confirmacion .fondo_ipad p.texto_confirmacion{
+    font-size: 10pt;
+    margin: 35px 0 0;
+    color: #DC3E00;
+}
+
+#content_confirmacion .fondo_ipad .datos_login{
+    margin: 75px 0 0;
+}
+
+#content_confirmacion .fondo_ipad .datos p{
+    font-size: 9.5pt;
+}
+
+#content_confirmacion .fondo_ipad .datos li{
+    margin: 4px 0;
+}
+
+
+#content_confirmacion .fondo_ipad .datos .informe_legal{
+    height: 340px;
+}
+
+#content_confirmacion .fondo_ipad .datos .informe_legal #texto_legal{
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background: url("../images/registro/confirmar/legalBG.jpg") repeat scroll 0 0 transparent;
+    border: 2px solid #8A9C9F;
+    padding: 2px 5px;
+    resize: none;
+    width: 650px;
+}
+
+#content_confirmacion .fondo_ipad .datos .informe_legal .radios .confirmacion{
+    color: #DC3E00;
+    font-size: 9.5pt;
+    margin: 0 75px 0 0;
+}
+
+#content_confirmacion .fondo_ipad .datos .informe_legal .radios .input_radios{
+    
+}
+
+#content_confirmacion .fondo_ipad .datos .informe_legal p{
+    font-size: 7.8pt;
+}
+
+
+#content_confirmacion .fondo_ipad .datos .informe_legal .radios{
+    margin: 0 0 0 110px;
+}
+
+#content_confirmacion .fondo_ipad .datos .botones_formulario{
+    clear: both;
+    text-align: right;
+}
+
+#content_confirmacion .fondo_ipad .datos .botones_formulario button{
+    background: url("../images/registro/confirmar/btn_confirmar.jpg") repeat-x scroll 0 0 transparent;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border: 2px solid #8A9C9F;
+    cursor: pointer;
+    color: #DC3E00;
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+/***FIN confirmacion***/
+
+
+/***Contacto***/
+
+#formulario_contacto{
+    position: absolute;
+    overflow: hidden;
+}
+
+.fondo{
+    background: url("../images/contacto/formulario/fondo_externo.png") no-repeat center center transparent;
+    height: 311px;
+    position: relative;
+    width: 414px;   
+}
+
+
+.fondo_interno{
+    background: url("../images/contacto/formulario/fondo_interno.png") no-repeat scroll center center transparent;
+    height: 295px;
+    padding: 14px 0 0 19px;
+    width: 394px;
+}
+
+.contenido{
+    overflow: hidden;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.contenido label{
+    display: inline-block;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.contenido textarea{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 75px;
+    margin-top: 20px;
+    resize: none;
+    width: 218px;
+}
+
+.contenido .input_texto{
+    background-color: #D56213;
+    border: medium none;
+    border-radius: 8px 8px 8px 8px;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding: 0 5px;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    height: 14px;
+    width: 188px;
+}
+
+.fondito_externo{
+    background: url("../images/contacto/formulario/fondito_interno.png") no-repeat scroll center center transparent;
+    height: 116px;
+    overflow: hidden;
+    padding: 15px 69px;
+    width: 259px;
+}
+
+.button_envio{
+    clear: both;
+}
+
+.contenido #datos_contacto{
+    float: left;
+    width: 100%;
+    
+}
+.button_envio{
+    background: url("../images/contacto/formulario/btn_send.png") no-repeat scroll center center transparent;
+    border: medium none;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -moz-webkit-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    height: 33px;
+    margin-left: 201px;
+    width: 49px;
+}
+
+
+/***Terminos y condiciones***/
+
+.content_term{
+    background-color: #C0C0C0;
+    
+}
+
+#term_condiciones{
+    
+    border: 3px solid #FFFFFF;
+    margin-left: 160px;
+    padding: 50px 20px 0;
+    text-align: justify;
+    width: 1000px;
+    border-radius: 32px;
+    moz-border-radius: 32px;
+    webkit-border-radius: 32px;
+}
+
+#term_condiciones p{
+    
+}
+
+/***Mundos nuevos***/
+
+#link_mundos_nuevos{
+    background-image: url("../images/images_home/popup/PASCUAS-POP-UP-FLATTEN.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 548px;
+    overflow: hidden;
+    position: relative;
+    width: 682px;
+}
+
+#link_mundos_nuevos #link_mundoverde{
+    /*background-image: url("../images/images_home/popup/link_verde.png");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 86px;
+    left: 109px;
+    position: absolute;
+    top: 321px;
+    width: 118px;
+    
+}
+
+#link_mundos_nuevos #link_mundoazul{
+    /*background-image: url("../images/images_home/popup/link_azul.png");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 84px;
+    left: 460px;
+    position: absolute;
+    top: 321px;
+    width: 114px;
+}
+
+/***Informacion Nutricional***/
+
+#content_nutricional{
+    background: url("../images/nutricional/KINDER-CHOCOLATE-IPAD.png") no-repeat scroll center center transparent;
+    height: 513px;
+    overflow: hidden;
+    width: 450px;
+}
+
+#content_nutricional #imagen_centro{
+    height: 357px;
+    padding: 159px 0 0 148px;
+    width: 294px;
+}
+
+#content_nutricional #imagen_centro .error_ipad{
+    color: #FFFFFF;
+    font-family: Arial Rounded MT Bold;
+    padding: 25px;
+    position: relative;
+    width: 200px;
+}
+
+/***Estilo validator***/
+
+.error{
+    color: #FF0000;
+    font-family: Arial !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+}
+.error_validregistro{
+    color: #FF0000 !important;
+    font-family: arial !important;
+    font-size: 9px !important;
+}
+
+#video_propaganda{
+    
+}    
+
+/***Anclajes***/
+
+
+.anchor_posicion{
+        
+        position: absolute;
+        top: 40%;
+        
+}
+
+@media screen and (max-width: 800px) {
+    .anchor_posicion{
+        
+        top: 300px;
+        
+    }
+}    
+
+@media screen and (min-width: 800px){
+    
+    .anchor_posicion{
+        
+        top: 600px;
+        
+    }
+}
+
+
+@media screen and (min-width: 1280px){
+    
+    .anchor_posicion{
+        
+        top: 435px;
+        
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+    
+    .anchor_posicion{
+        
+        top: 300px;
+        
+    }
+}
+
+
+/*@media screen and (min-height: 900px){
+    
+    .anchor_posicion{
+        
+        top: 243px;
+        
+    }
+}
+*/
+
+
+        
