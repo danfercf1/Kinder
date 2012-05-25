@@ -630,27 +630,30 @@ ul, li {
 #content_registro{
     background: url("../images/registro/background.png") no-repeat scroll center center transparent;
     /*display: inline-block;*/
-    height: 340px;
+    height: 540px;
     overflow: hidden;
     padding: 200px 0 0;
     width: 610px;
 }
 
 #content_registro #titulo{
-    
+    background: url("../images/registro/btnLabel.png") no-repeat scroll center center transparent;
     color: #08A8C0;
+    display: block;
     font-family: Arial Rounded MT Bold;
     font-size: 38px;
-    left: 204px;
+    height: 68px;
+    left: 147px;
     position: absolute;
-    text-shadow: 0.05em 0.05em 0.05em #333;
-    top: 162px;
-    
+    text-align: center;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
+    top: 227px;
+    width: 336px;
 }
 
 #content_registro #form_registro #lista_formulario{
     overflow: hidden;
-    padding: 38px 144px 0 0;
+    padding: 138px 110px 0 0;
     text-align: right;
 }
 
@@ -672,8 +675,7 @@ ul, li {
 
 
 #content_registro #form_registro #lista_formulario input{
-    
-    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    background: url("../images/registro/bgTextfield.jpg") repeat-x scroll 0 0 transparent;
     border: medium none;
     border-radius: 35px 35px 35px 35px;
     color: #333333;
@@ -685,14 +687,14 @@ ul, li {
 }
 
 .boton_registro{
-    background: url("../images/registro/btn_enter.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/registro/btnEnter.png") no-repeat scroll 0 0 transparent;
     border: medium none;
     cursor: pointer;
-    height: 57px;
-    left: 453px;
+    height: 88px;
+    left: 516px;
     position: absolute;
-    top: 394px;
-    width: 59px;
+    top: 551px;
+    width: 90px;
 }
 
 /***
@@ -708,11 +710,11 @@ ul, li {
 }
 
 #fancybox-close {
-    background: url("../images/registro/cerrar.png") no-repeat scroll center center transparent;
-    height: 37px;
-    right: 150px;
-    top: 108px;
-    width: 33px;
+    background: url("../images/registro/btnClose.png") no-repeat scroll center center transparent;
+    height: 51px;
+    right: 76px;
+    top: 139px;
+    width: 35px;
     z-index: 1103;
 }
 
@@ -722,27 +724,31 @@ ul, li {
 
 #content_login{
     background: url("../images/registro/background.png") no-repeat scroll center center transparent;
-    height: 340px;
+    height: 540px;
     overflow: hidden;
     padding: 200px 0 0;
     width: 610px;
 }
 
 #content_login #titulo{
-    
+    background: url("../images/registro/btnLabel.png") no-repeat scroll center center transparent;
     color: #2ED2D4;
+    display: block;
     font-family: Arial Rounded MT Bold;
     font-size: 38px;
-    left: 260px;
+    height: 68px;
+    left: 150px;
     position: absolute;
+    text-align: center;
     text-shadow: 0.05em 0.05em 0.05em #333333;
-    top: 160px;
+    top: 225px;
+    width: 336px;
     
 }
 
 #content_login #form_login #lista_formulario{
     overflow: hidden;
-    padding: 38px 60px 0 194px;
+    padding: 155px 60px 0 194px;
 }
 
 #content_login #form_login #lista_formulario li{
@@ -761,8 +767,7 @@ ul, li {
 
 
 #content_login #form_login #lista_formulario input{
-    
-    background: url("../images/registro/background_input.png") no-repeat scroll center -5px transparent;
+    background: url("../images/registro/bgTextfield.jpg") repeat-x scroll 0 0 transparent;
     border: medium none;
     border-radius: 23px 23px 23px 23px;
     moz-border-radius: 23px 23px 23px 23px;
