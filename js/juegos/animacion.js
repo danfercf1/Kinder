@@ -238,5 +238,5 @@ var animacion_juegos = new function(){
         }
         
     }
-    
+
 }

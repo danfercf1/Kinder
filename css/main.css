@@ -638,15 +638,14 @@ ul, li {
 
 #content_registro #titulo{
     background: url("../images/registro/btnLabel.png") no-repeat scroll center center transparent;
-    color: #08A8C0;
+    color: #00C2C4;
     display: block;
     font-family: Arial Rounded MT Bold;
-    font-size: 38px;
+    font-size: 55px;
     height: 68px;
     left: 147px;
     position: absolute;
     text-align: center;
-    text-shadow: 0.05em 0.05em 0.05em #333333;
     top: 227px;
     width: 336px;
 }
@@ -732,15 +731,14 @@ ul, li {
 
 #content_login #titulo{
     background: url("../images/registro/btnLabel.png") no-repeat scroll center center transparent;
-    color: #2ED2D4;
+    color: #2ed2d4;
     display: block;
     font-family: Arial Rounded MT Bold;
-    font-size: 38px;
+    font-size: 51px;
     height: 68px;
     left: 150px;
     position: absolute;
     text-align: center;
-    text-shadow: 0.05em 0.05em 0.05em #333333;
     top: 225px;
     width: 336px;
     
@@ -748,7 +746,7 @@ ul, li {
 
 #content_login #form_login #lista_formulario{
     overflow: hidden;
-    padding: 155px 60px 0 194px;
+    padding: 140px 60px 0 194px;
 }
 
 #content_login #form_login #lista_formulario li{
@@ -757,10 +755,10 @@ ul, li {
 }
 
 #content_login #form_login #lista_formulario label{
-    
+
     color: #08A8C0;
     font-family: Arial Rounded MT Bold;
-    font-size: 25px;
+    font-size: 33px;
     font-weight: bold;
     padding-left: 20px;
 }
@@ -782,12 +780,11 @@ ul, li {
 }
 
 #content_login #form_login .links{
- 
     background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
     color: #F8442B;
     cursor: pointer;
     font-family: Arial Rounded MT Bold;
-    font-size: 13px;
+    font-size: 18px;
     margin-left: 224px;
     padding: 0 0 0 24px;
 }

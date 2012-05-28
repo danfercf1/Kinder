@@ -84,20 +84,22 @@ function init_juegos(){
     guardian_juegos.init();
 
     cohete6.init();
-    
+
+    planeta3.init();
+
     navegador.init();
     
-    bichos1.init();
+    //bichos1.init();
     
-    bichos2.init();
+    //bichos2.init();
+
+    serpienteSprite.init( 1200, 770, stage_juegos, canvas_juegos);
     
     lava4.init();
     
     lava5.init();
     
     lava6.init();
-    
-    planeta3.init();
     
     planeta4.init();
     
@@ -113,8 +115,6 @@ function init_juegos(){
 
     cohete5.init();
 
-
-    
     cohete7.init();
     
     cohete8.init();
@@ -144,14 +144,14 @@ function init_juegos(){
     animacion_juegos.flotar(titulo_juegos,50,5,1);
     
     
-    animacion_juegos.puntero(navegador.cursorizq);
+    /*animacion_juegos.puntero(navegador.cursorizq);
     
     animacion_juegos.puntero(navegador.cursorder);
     
     animacion_juegos.botones(navegador.cursorizq);
     
     animacion_juegos.botones(navegador.cursorder);
-    
+    */
    
     ticker_all();
 }

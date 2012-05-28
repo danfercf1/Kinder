@@ -1,15 +1,15 @@
 <section id="content_login">
-    <span id="titulo">Login</span>
+    <span id="titulo">login</span>
     <form id="form_login" action="<?php echo ROOT_PATH;?>loginFrontend/access" method="POST">
         <ul id="lista_formulario">
-            <li><label for="LOGIN_USUARIO">Usuario</label></li>
+            <li><label for="LOGIN_USUARIO">usuario</label></li>
             <li><input id="LOGIN_USUARIO" name="LOGIN_USUARIO" type="text" class="form_login required" value="<?php echo $_POST['LOGIN_USUARIO'];?>"/></li>
-            <li><label for="PASS_USUARIO">Password</label></li>
+            <li><label for="PASS_USUARIO">password</label></li>
             <li><input id="PASS_USUARIO" name="PASS_USUARIO" type="password" class="form_login required"/></li>
         </ul>
-        <a class="links" id="lost_password">Olvidaste tu password</a>
+        <a class="links" id="lost_password">olvidaste tu password</a>
         <br />
-        <a class="links" id="register">Registrarse</a>
+        <a class="links" id="register">registrarse</a>
         <button class="boton_registro"></button>
     </form>
     

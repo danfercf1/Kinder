@@ -42,6 +42,5 @@ function logoKinderGirando (){
             
             this.obj.y = y;
         }
-            
-            
+
 }

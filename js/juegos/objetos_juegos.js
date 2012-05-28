@@ -102,10 +102,15 @@ var navegador = new function(){
         
         navegador.init_cursores();
         
-        navegador.add_juegos(navegador.bitmap_juegos[0]);
-        
+        //navegador.add_juegos(navegador.bitmap_juegos[0]);
+
+        /**
+         * Links y puntero de juegos
+         */
         animacion_juegos.link(navegador.bitmap_juegos[0]);
+        animacion_juegos.link(navegador.bitmap_juegos[1]);
         animacion_juegos.puntero(navegador.bitmap_juegos[0]);
+        animacion_juegos.puntero(navegador.bitmap_juegos[1]);
         
         this.resize();
     
@@ -114,7 +119,9 @@ var navegador = new function(){
     this.init_bg = function(){
         
         var navegador_imagen = new Bitmap(navegador.url);
-        
+
+        navegador.bitmap_juegos;
+
         //Shape
         
         var s = new Shape(navegador_imagen);
@@ -122,8 +129,20 @@ var navegador = new function(){
         s.x = 15;
         
         s.y = 40;
-        
+
+        navegador.bitmap_juegos[0].x = 20;
+
+        navegador.bitmap_juegos[0].y = -100;
+
+        navegador.bitmap_juegos[1].x = 170;
+
+        navegador.bitmap_juegos[1].y = -100;
+
         navegador.obj.addChild(s);
+
+        navegador.obj.addChild(navegador.bitmap_juegos[0]);
+
+        navegador.obj.addChild(navegador.bitmap_juegos[1]);
      }
 
     this.init_textoJuegos = function(){
@@ -970,4 +989,52 @@ var cohete9 = new function(){
         
     }
  
+}
+
+/**
+ *  Sprite Serpientes
+ * @type {function(){
+
+ }
+ */
+var serpienteSprite = new function(){
+
+    this.obj = new Container();
+
+    this.serpienteAnimacion = new SpriteSheet({
+        "frames": {
+            "width": 121,
+            "regX" : 2,
+            "regY" : 2,
+            "height": 101
+        },
+        "animations": {"spin": [0,47,"spin",5]},
+        "images": ["images/juegos/bug1.png"]
+
+    });
+
+
+    this.init = function(x, y, stage, canvas){
+        stage.addChild(this.obj);
+        this.init_serpienteSprite();
+        this.resize(canvas, x, y);
+    }
+
+    this.init_serpienteSprite = function(){
+
+        var bmpAnimation = new BitmapAnimation(this.serpienteAnimacion);
+
+        bmpAnimation.gotoAndPlay("spin");//animate
+
+
+        this.obj.addChild(bmpAnimation);
+
+    }
+
+    this.resize = function(canvas, x , y){
+
+        this.obj.x = x;
+
+        this.obj.y = y;
+    }
 }

@@ -1,5 +1,5 @@
 <section id="content_registro">
-    <span id="titulo">Bienvenido</span>
+    <span id="titulo">bienvenido</span>
     <form id="form_registro" action="<?php echo ROOT_PATH;?>frontend/create" method="POST">
         <ul id="lista_formulario">
             <li><label for="NOMBRES_USUARIO" class="etiqueta_flecha">mi nombre</label><input name="NOMBRES_USUARIO" id="NOMBRES_USUARIO" type="text" value="<?php echo $_POST['NOMBRES_USUARIO'];?>" class="form_login required"/></li>
