@@ -265,37 +265,6 @@ var zorro3 = new function(){
     }
 }
 
-
-
-/***Objeto hoja***/
-
-/*var hoja = new function(){
-    
-    this.obj = new Container();
-    
-    this.hoja_img = new Bitmap("images/verde/leaf.png");
-    
-    this.init = function(){
-        
-        stage_verde.addChild(hoja.obj);
-        this.init_hoja();
-        this.resize();
-        
-    }
-    
-    this.init_hoja = function(){
-        hoja.obj.addChild(hoja.hoja_img);
-    }
-    
-    
-    this.resize = function(){
-        
-        hoja.obj.x = (canvas_verde.width/2) - 350;
-        hoja.obj.y = (canvas_verde.height/2) - 6;
-        
-    }
-}
-*/
 /***Objeto hoja2***/
 
 var hoja2 = new function(){
@@ -845,33 +814,3 @@ var nube_verde3 = new function(){
         
     }
 }
-
-/***Objeto nube_verde4***/
-/*
-var nube_verde4 = new function(){
-    
-    this.obj = new Container();
-    
-    this.nube_verde4_img = new Bitmap("images/contacto/cloud4.png");
-    
-    this.init = function(){
-        
-        stage_verde.addChild(nube_verde4.obj);
-        this.init_nube_verde4();
-        this.resize();
-        
-    }
-    
-    this.init_nube_verde4 = function(){
-        nube_verde4.obj.addChild(nube_verde4.nube_verde4_img);
-    }
-    
-    
-    this.resize = function(){
-        
-        nube_verde4.obj.x = (canvas_verde.width/2) + 200;
-        nube_verde4.obj.y = 50;
-        
-    }
-}
-*/

@@ -810,47 +810,57 @@ ul, li {
 ***/
 
 #content_gracias{
-    
+
     background: url("../images/registro/background.png") no-repeat scroll center center transparent;
-    height: 379px;
-    margin-left: 176px;
+    height: 540px;
+    margin: 0 auto;
     overflow: hidden;
-    padding: 158px 0 0 6px;
-    width: 428px;
-    
+    padding: 200px 0 0;
+    width: 610px;
 }
 
-#content_gracias .titulo_grande{
+#content_gracias .tituloGracias{
+    background: url("../images/registro/bgTitle.png") repeat-x scroll 0 0 transparent;
+    border-radius: 45px 45px 45px 45px;
+    display: block;
+    height: 45px;
+    margin: 20px auto;
+    padding-top: 18px;
+    position: relative;
+    width: 339px;
+}
+
+#content_gracias .tituloGracias .titulo_grande{
     
     color: #FFCC02;
     font-family: Arial Rounded MT Bold;
     font-size: 25px;
     font-weight: bold;
-    position: absolute;
+    /*position: absolute;*/
+    position: relative;
+    text-align: center;
     text-shadow: 0.05em 0.05em 0.05em #333;
     top: 168px;
     left: 345px;
        
 }
 
-#content_gracias .titulo_pequeno{
-    color: #FFCC02;
+#content_gracias .tituloGracias .titulo_pequeno{
+    color: #08A8C0;
+    display: block;
     font-family: Arial Rounded MT Bold;
+    font-size: 25px;
     font-weight: bold;
-    position: absolute;
-    text-shadow: 0.05em 0.05em 0.05em #333;
-    top: 181px;
-    left: 287px;
-    font-size: 17px;
-       
+    position: relative;
+    text-align: center;
 }
 
 
 #content_gracias article{
-    
-    padding: 86px 0 0 52px;
+
+    margin: 0 auto;
+    padding-top: 50px;
     width: 314px;
-    
 }
 
 #content_gracias article p{
@@ -864,7 +874,7 @@ ul, li {
 }
 
 #content_gracias article .flecha_top{
-    background: url("../images/registro/flecha.png") no-repeat scroll 12% 10% transparent;
+    background: url("../images/registro/flecha.png") no-repeat scroll 9% 10% transparent;
 }
 
 .error_registro{

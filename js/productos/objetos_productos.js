@@ -40,14 +40,6 @@ var maquina = new function(){
         
         stage_productos.addChild(maquina.obj);
         
-        /*maquina.add_productos("images/productos/"+json_consulta[0]['IMAGEN_PRODUCTO']);
-        
-        jQuery('#descripcion_producto p').html(json_consulta[0]['DESCRIPCION_PRODUCTO']);
-        
-        $('.scroll-pane').jScrollPane();
-       
-        jQuery('#img_infonutricional').attr('var',json_consulta[0]['NOMBRE_PRODUCTO']);*/
-        
         maquina.add_productos();
         
         this.resize();
@@ -275,17 +267,11 @@ var textokinder = new function(){
     
     this.obj = new Container();
     
-    //this.textokinder_img = new Bitmap("images/productosf/kinder-text.png");
-    
-    //this.textokinder_img = new Text();
-    
     this.scroll_img = new Bitmap("images/productosf/scroll.png");
     
     this.init = function(){
         
         stage_productos.addChild(textokinder.obj);
-        //this.init_textokinder();
-        //this.init_scroll();
         this.resize();
         
     }

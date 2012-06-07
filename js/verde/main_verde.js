@@ -60,8 +60,7 @@ function init_verde(){
     
     pajarosblancos2.init();
     
-    //nube_verde4.init();
-    
+
     liana.init();
     
     liana2.init();
@@ -92,8 +91,6 @@ function init_verde(){
     animacion_verde.horizontal_pajaros(pajarosblancos2,-200,50,0);
     
     animacion_verde.saltar(guardian_verde,15,4);
-    
-    //animacion_verde.mortal(chango,360,5);
     
     animacion_verde.salir_cueva(comadreja,3);
     

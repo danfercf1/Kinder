@@ -4,10 +4,10 @@
         <ul id="lista_formulario">
             <li><label for="LOGIN_USUARIO">usuario</label></li>
             <li><input id="LOGIN_USUARIO" name="LOGIN_USUARIO" type="text" class="form_login required" value="<?php echo $_POST['LOGIN_USUARIO'];?>"/></li>
-            <li><label for="PASS_USUARIO">password</label></li>
+            <li><label for="PASS_USUARIO">contrase&ntilde;a</label></li>
             <li><input id="PASS_USUARIO" name="PASS_USUARIO" type="password" class="form_login required"/></li>
         </ul>
-        <a class="links" id="lost_password">olvidaste tu password</a>
+        <a class="links" id="lost_password">olvidaste tu contrase&ntilde;a</a>
         <br />
         <a class="links" id="register">registrarse</a>
         <button class="boton_registro"></button>

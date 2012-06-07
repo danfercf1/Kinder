@@ -168,47 +168,6 @@ var animacion_museo = new function(){
         .to({y: yf}, t*1000);
     }
     
-    /*this.botones = function(obj){
-        
-        obj.onClick = function(evt){
-        
-           if(obj.name == "der"){
-            
-                  if(animacion_museo.index+1 < _imagenes.length){
-                    
-                    animacion_museo.index++;
-                    
-                  }else{
-                    
-                    animacion_museo.index = 0;
-                    
-                  }
-                  
-                  //animacion_museo.fadein(ostra.add_sorpresas.sorpresa);
-                  
-                  ostra.sorpresas.removeAllChildren();
-                
-                  ostra.add_sorpresas("images/sorpresas/"+_imagenes[animacion_museo.index]);
-           }
-           
-           if(obj.name == "izq"){
-                
-                    if(animacion_museo.index > 0){
-                        
-                        animacion_museo.index--;
-                            
-                    }else{
-                        
-                        animacion_museo.index = _imagenes.length-1;
-                    }
-                    
-                    ostra.sorpresas.removeAllChildren();
-                    ostra.add_sorpresas("images/sorpresas/"+_imagenes[animacion_museo.index]);
-           }
-        }
-    }
-    */
-    
     this.botones = function(obj){
         
         obj.onClick = function(evt){
@@ -236,8 +195,6 @@ var animacion_museo = new function(){
                   }else{
                         
                   }
-                
-                  //ostra.add_sorpresas("images/sorpresas/"+_imagenes[animacion_museo.index]);
            }
            
            if(obj.name == "izq"){

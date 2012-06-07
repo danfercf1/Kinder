@@ -83,7 +83,7 @@
 
 <script type="text/javascript" src="<?php echo JS_PATH;?>agenda/main_agenda.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>agenda/objetos_agenda.js"></script>
-<!--<script type="text/javascript" src="<?php echo JS_PATH;?>agenda/animacion.js"></script>-->
+<script type="text/javascript" src="<?php echo JS_PATH;?>agenda/animacion.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>calendario/fullcalendar.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>calendario/calendario.js"></script>
 

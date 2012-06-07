@@ -231,8 +231,10 @@ var animacion_juegos = new function(){
         objeto.onClick = function(evt){
             
             if(objeto.name=="velocidad"){
+                _gaq.push(['_trackEvent', 'Links Juegos', 'Velocidad']);
                 window.open("http://www.kindervelocidad.com/");
             }if(objeto.name=="skater"){
+                _gaq.push(['_trackEvent', 'Links Juegos', 'Skater']);
                 window.open("http://skater.kinder.com.ar/");
             }
         }

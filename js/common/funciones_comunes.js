@@ -44,3 +44,30 @@ function logoKinderGirando (){
         }
 
 }
+
+/**
+ *  Agregar Componentes
+ *
+ */
+
+function addComponentes() {
+    this.obj = new Container();
+    this.compImg = null;
+
+    this.init = function (obj, x, y, stage){
+        this.compImg = new Bitmap(obj);
+        stage.addChild(this.obj);
+        this.init_addComponente(this.compImg);
+        this.resize(x, y);
+    }
+
+    this.init_addComponente = function (obj) {
+        this.obj.addChild(obj);
+    }
+
+
+    this.resize = function (x, y) {
+        this.obj.x = x;
+        this.obj.y = y;
+    }
+}

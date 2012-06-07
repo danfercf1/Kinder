@@ -950,200 +950,7 @@ var nube_8=new function()
     }
     
 }
-/*
-var nube_9=new function()
-{   
-    this.obj = new Container();          
-    this.url = "images/images_home/nube_9.png";
-    
-    this.init = function()
-    {
-        stage.addChild(nube_9.obj);        
-        nube_9.init_fondo() ;                        
-        this.resize();   
-    }    
-    this.init_fondo = function()
-    {   
-       var nube_9_imagen = new Bitmap(nube_9.url);         
-       // Shape ...
-       
-        var s = new Shape(nube_9_imagen); 
-        
-        s.x = 10;
-        s.y = 40;
-        
-        nube_9.obj.addChild(s) ;          
-    }           
-    this.resize = function() 
-    {           
-        nube_9.obj.x =(canvas_home.width /2)-150 ;
-      // nube_9.obj.x = -200  ;          
-        nube_9.obj.y = 0   ; 
-         
-    }
-    
-}
-var nube_10=new function()
-{   
-    this.obj = new Container();          
-    this.url = "images/images_home/nube_10.png";
-    
-    this.init = function()
-    {
-        stage.addChild(nube_10.obj);        
-        nube_10.init_fondo() ;                        
-        this.resize();   
-    }    
-    this.init_fondo = function()
-    {   
-       var nube_10_imagen = new Bitmap(nube_10.url);         
-       // Shape ...
-       
-        var s = new Shape(nube_10_imagen); 
-        
-        s.x = 10;
-        s.y = 40;
-        
-        nube_10.obj.addChild(s) ;          
-    }           
-    this.resize = function() 
-    {           
-         nube_10.obj.x =(canvas_home.width /2)+280  ;
-        // nube_10.obj.x = (canvas_home.width) + 350   ;          
-        nube_10.obj.y = (canvas_home.height/2 )- 226  ; 
-    }
-}
 
-var nube_11=new function()
-{   
-    this.obj = new Container();          
-    this.url = "images/images_home/nube_11.png";
-    
-    this.init = function()
-    {
-        stage.addChild(nube_11.obj);        
-        nube_11.init_fondo() ;                        
-        this.resize();   
-    }    
-    this.init_fondo = function()
-    {   
-       var nube_11_imagen = new Bitmap(nube_11.url);         
-       // Shape ...
-       
-        var s = new Shape(nube_11_imagen); 
-        
-        s.x = 10;
-        s.y = 40;
-        
-        nube_11.obj.addChild(s) ;          
-    }           
-    this.resize = function() 
-    {           
-        nube_11.obj.x =(canvas_home.width /2)+280 ;
-        //nube_11.obj.x = -200  ;          
-        nube_11.obj.y = 124 ; 
-         
-    }
-    
-}
-
-var nube_12=new function()
-{   
-    this.obj = new Container();          
-    this.url = "images/images_home/nube_12.png";
-    
-    this.init = function()
-    {
-        stage.addChild(nube_12.obj);        
-        nube_12.init_fondo() ;                        
-        this.resize();   
-    }    
-    this.init_fondo = function()
-    {   
-       var nube_12_imagen = new Bitmap(nube_12.url);         
-       // Shape ...
-       
-        var s = new Shape(nube_12_imagen); 
-        
-        s.x = 10;
-        s.y = 40;
-        
-        nube_12.obj.addChild(s) ;          
-    }           
-    this.resize = function() 
-    {   
-        nube_12.obj.x = (canvas_home.width) + 350   ;          
-        nube_12.obj.y = 24 ;
-         
-    }
-    
-}
-var nube_13=new function()
-{   
-    this.obj = new Container();          
-    this.url = "images/images_home/nube_13.png";
-    
-    this.init = function()
-    {
-        stage.addChild(nube_13.obj);        
-        nube_13.init_fondo() ;                        
-        this.resize();   
-    }    
-    this.init_fondo = function()
-    {   
-       var nube_13_imagen = new Bitmap(nube_13.url);         
-       // Shape ...
-       
-        var s = new Shape(nube_13_imagen); 
-        
-        s.x = 10;
-        s.y = 40;
-        
-        nube_13.obj.addChild(s) ;          
-    }           
-    this.resize = function() 
-    {   
-        nube_13.obj.x =(canvas_home.width/2) -250 ;
-                
-        nube_13.obj.y = (canvas_home.height/2)-296 ;
-         
-    }
-    
-}
-
-var nube_14=new function()
-{   
-    this.obj = new Container();          
-    this.url = "images/images_home/nube_14.png";
-    
-    this.init = function()
-    {
-        stage.addChild(nube_14.obj);        
-        nube_14.init_fondo() ;                        
-        this.resize();   
-    }    
-    this.init_fondo = function()
-    {   
-       var nube_14_imagen = new Bitmap(nube_14.url);         
-       // Shape ...
-       
-        var s = new Shape(nube_14_imagen); 
-        
-        s.x = 10;
-        s.y = 40;
-        
-        nube_14.obj.addChild(s) ;          
-    }           
-    this.resize = function() 
-    {  
-        
-          nube_14.obj.x =canvas_home.width -150 ;
-          nube_14.obj.y = (canvas_home.height/2) ; 
-         
-    }
-    
-}
-*/
 var pajaro_rojo_1=new function()
 {   
     this.obj = new Container();          
@@ -1235,8 +1042,6 @@ var pajaro_rojo_3=new function()
        
         var s = new Shape(pajaro_rojo_3_imagen); 
         
-        //s.skewY = s.skewX = 30;
-        
         s.x = 10;
         s.y = 40;
         
@@ -1270,7 +1075,7 @@ var pajaro_rojo_4=new function()
               
         var s = new Shape(pajaro_rojo_4_imagen); 
         
-        //s.skewY = s.skewX = 45;
+
         
         s.x = 10;
         s.y = 40;

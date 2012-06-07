@@ -539,18 +539,7 @@ var muneco_celeste = new function(){
     this.init_muneco_celeste = function(){
         muneco_celeste.obj.addChild(muneco_celeste.muneco_celeste_img);
     }
-    
-    /*this.init_muneco_celestec = function(){
-        
-        muneco_celeste.muneco_celeste_imgc.x = -10;
-        muneco_celeste.muneco_celeste_imgc.y = -40;
-        muneco_celeste.muneco_celeste_imgc.alpha = 0;
-        
-         
-        muneco_celeste.obj.addChild(muneco_celeste.muneco_celeste_imgc);
-    }*/
-    
-    
+
     this.resize = function(){
         
         muneco_celeste.obj.x = (canvas_azul.width/2) + 116;

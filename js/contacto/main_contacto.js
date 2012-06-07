@@ -94,14 +94,7 @@ function init_contacto(){
     
     //animacion_contacto.mover_brazo2(operador.brazoizquierdo_img,3,5,10);
     
-    
-    /*animacion_contacto.horizontal(nube1,1960,40,2,1,0);
-    
-    animacion_contacto.horizontal(nube2,1960,50,4,2,0);
-    
-    animacion_contacto.horizontal(nube3,1960,80,6,3,0);*/
-    
-    
+
     
     /***
     ****Actualizacion de Stage

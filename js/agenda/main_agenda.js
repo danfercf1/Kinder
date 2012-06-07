@@ -42,8 +42,18 @@ function init_agenda(){
     var logoKinder = new logoKinderGirando();
     
     logoKinder.init(492, 840, stage_agenda, canvas_agenda);
-    
-        
+
+
+    /**
+     * Animaciones
+     */
+
+    animacion_agenda.pestanear(operadorPC.ojoscerrados_img,3,5);
+
+    animacion_contacto.mover_brazo2(operador_lentes3D.brazoizq_img,2,7,-10);
+
+    animacion_contacto.mover_brazo2(operador_lentes3D.brazoder_img,2,7,-20);
+
     /***
     ****Actualizacion de Stage
     ***/

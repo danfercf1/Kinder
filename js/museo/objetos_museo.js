@@ -1,20 +1,4 @@
 /***
-****Objeto background
-***/
-
-/*var bg = new function(){
-    this.url = "images/museo/background-nuevo.png";
-    this.init = function(){
-        
-        bg = new Bitmap(bg.url);
-        
-        //stage_museo.addChild(bg);
-    } 
-    
-}
-*/
-
-/***
 ****Objeto Guardian
 ***/
 
@@ -894,34 +878,6 @@ var pulpo5 = new function(){
 ****Objeto titulo
 ***/
 
-/*var titulo = new function(){
-    
-    this.obj = new Container();
-    
-    this.titulo_img = new Bitmap("images/museo/texto.png");
-    
-    this.init = function(){
-        
-        stage_museo.addChild(titulo.obj);
-        this.init_titulo();
-        this.resize();
-        
-    }
-    
-    this.init_titulo = function(){
-        
-        titulo.obj.addChild(titulo.titulo_img);
-        
-    }
-    
-    
-    this.resize = function(){
-        
-        titulo.obj.x = (canvas_museo.width/2) - 220;
-        titulo.obj.y = (canvas_museo.height/2) - 140;
-        
-    }
-}*/
 
 var titulo_separado = new function(){
     

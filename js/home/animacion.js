@@ -2,8 +2,8 @@ var animacion_home = new function()
 {   
     this.objeto = null;
    
-   // animacion.horizontal(pecesamarillos3,1200,13,0); 
-   
+   // animacion.horizontal(pecesamarillos3,1200,13,0);
+
     this.horizontal = function(objeto,x0,t,tipoeasing)
     {           
             this.objeto = objeto;
@@ -63,7 +63,7 @@ var animacion_home = new function()
         . to({scaleX:0.25 ,scaleY:0.25, y: (canvas_home.height/2)+80})
         . call(this.voltear_solo,[objeto,180])
         . to({x: this.objeto.obj.x}, t*1000, easing2)
-        . call(this.voltear_solo,[objeto,0]); 
+        . call(this.voltear_solo,[objeto,0]);
         
     }*/
     
@@ -92,7 +92,7 @@ var animacion_home = new function()
         Tween
         . get(this.objeto.obj, {loop: true}, true )
         .wait(wi*1000)
-        . to({scaleX:escala ,scaleY:escala}) 
+        . to({scaleX:escala ,scaleY:escala})
         . to({x: x0}, t*1000, easing)
         .wait(wf*1000)
         
@@ -158,9 +158,9 @@ var animacion_home = new function()
     this.iniciar_nube=function(objeto)
     {
         //alert(objeto.obj.x);
-        objeto.obj.x=canvas_home.width+350 ;        
+        objeto.obj.x=canvas_home.width+350 ;
         //alert(objeto.obj.x);
-        
+
     }
     
     this.voltear = function(objeto,grados)
@@ -244,8 +244,8 @@ var animacion_home = new function()
     this.pajaro_rojo_diagonal = function(objeto,x0,y0,t,w,tipoeasing,tipoPajaro) 
     {
        
-     //  alert("Xo:"+x0+","+"Yo:"+ y0 ) ; 
-       
+     //  alert("Xo:"+x0+","+"Yo:"+ y0 ) ;
+
         this.objeto = objeto;
         
         switch (tipoeasing)
@@ -264,8 +264,8 @@ var animacion_home = new function()
             break;
         }
           
-         // . call(this.voltear,[objeto,0]) ;   
-          
+         // . call(this.voltear,[objeto,0]) ;
+
          Tween
                 . get(objeto.obj, {loop: true}, true)
                 . to({x: x0 , y: y0}, t, easing)
@@ -277,8 +277,8 @@ var animacion_home = new function()
      this.iniciar_pajaro_rojo=function(objeto,tipoPajaro)
     {
         
-          
-                           
+
+
             if(tipoPajaro==1)
             {
                 objeto.obj.x  = - 100 ;
@@ -307,8 +307,8 @@ var animacion_home = new function()
     this.pajaro_amarillo_diagonal = function(objeto,x0,y0,t,w,tipoeasing,tipoPajaro) 
     {
        
-     //  alert("Xo:"+x0+","+"Yo:"+ y0 ) ; 
-       
+     //  alert("Xo:"+x0+","+"Yo:"+ y0 ) ;
+
         this.objeto = objeto;
         
         switch (tipoeasing)
@@ -327,8 +327,8 @@ var animacion_home = new function()
             break;
         }
           
-         // . call(this.voltear,[objeto,0]) ;   
-          
+         // . call(this.voltear,[objeto,0]) ;
+
          Tween
               . get(objeto.obj, {loop: true}, true)
               . to({x: x0 , y: y0}, t, easing)
@@ -531,9 +531,9 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                   
                   . to({x:x0 , y: y0}, t, easing)
                   .  wait(w)
-                
-     
-                //stage.update();             
+
+
+                //stage.update();
     }
     
     
@@ -549,9 +549,9 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                    obj.onMouseOver = function()
                     {
                             //obj.scaleX =  obj.scale*tam;
-                            
+
                             //oncanvas_home.mouse.cursor("pointer");
-                            
+
                             cursor_izquierda.init_fondo.removeAllChildren();
                             
                             stage.update();
@@ -559,10 +559,10 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                     
             		obj.onMouseOut = function(scaleXoY)
                     {
-                            //obj.scaleX = obj.scale;                             
-                                    
+                            //obj.scaleX = obj.scale;
+
                             //oncanvas_home.mouse.cursor("default");
-                            
+
                             stage.update();
                     }
         
@@ -573,7 +573,7 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                     {
                             obj.scaleY =  obj.scale*tam;
                              //console.log( obj);
-                              
+
                             oncanvas_home.mouse.cursor("pointer");
                             stage.update();
                     }

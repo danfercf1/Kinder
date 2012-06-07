@@ -148,9 +148,7 @@ var animacion_productos = new function()
                                
                                if(objeto.obj.x <= 700){
                                     valor = 725-objeto.obj.x;
-                                    /*animacion_productos.apagar_luz(lucesmaquina,1,0,1);
-                                    animacion_productos.mover_ruedas(movruedas,0.7,1);*/
-                                    
+
                                     if(animacion_productos.index > 0){
                             
                                            animacion_productos.index--;
@@ -176,10 +174,7 @@ var animacion_productos = new function()
                                }
                                if(objeto.obj.x >= 745){
                                     valor = (objeto.obj.x-725)*(-1);
-                                    /*animacion_productos.apagar_luz(lucesmaquina,1,0,1);
-                                    animacion_productos.mover_ruedas(movruedas,0.7,1);*/
-                                     
-                                    
+
                                     if(animacion_productos.index+1 < maquina.json_consulta.length){
                             
                                            animacion_productos.index++;
@@ -205,7 +200,7 @@ var animacion_productos = new function()
                            }
 				    }
 					
-					//stage_productos.update();
+
 				}
                 
                 stage_productos.update();
