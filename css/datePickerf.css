@@ -193,7 +193,7 @@ td.datepickerSpecial.datepickerSelected a {
 ** Agregados por daniel
 **/
 .ui-widget-header {
-    background: url("../images/registro/bgDatepicker.png") repeat scroll 0 0 #CCCCCC;
+    background: none repeat scroll 0 0 #DF4A20;
     border: 1px solid #AAAAAA;
     color: #222222;
     font-weight: bold;
