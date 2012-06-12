@@ -3,12 +3,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
 
 <head>
-    <meta http-equiv="content-type" content="text/html" /> 
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Kinder</title>
     <link rel="stylesheet" href="<?php echo CSS_PATH;?>fancybox-front/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo CSS_PATH;?>jquery.mCustomScrollbar.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo CSS_PATH;?>jquery.jscrollpane.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo CSS_PATH;?>calendario/fullcalendar.css" type="text/css" media="screen" />
+    <link href="<?php echo CSS_PATH;?>datePickerf.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo CSS_PATH;?>jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo CSS_PATH;?>datePickerf.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo CSS_PATH;?>main.css" rel="stylesheet" type="text/css" />
     
     <!--[if IE 9]>
@@ -25,6 +28,9 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.min.js"></script>
 
 <script type="text/javascript" src="<?php echo JS_PATH;?>easeljs-0.4.2.min.js"></script>
+
+<script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.datepicker-es.js"></script>
+
 
 <!--<script src="http://code.createjs.com/easeljs-0.4.2.min.js"></script>-->
 
@@ -104,15 +110,23 @@
 
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29837586-1']);
-  _gaq.push(['_trackPageview']);
+    /*var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29837586-1']);
+    _gaq.push(['_trackPageview']);
+    */
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    var _gaq = _gaq || [];
+
+    _gaq.push(
+        ['_setAccount', 'UA-32602622-1'],
+        ['_trackPageview']
+    );
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
 </script>
 
@@ -251,8 +265,7 @@ $(document).ready(function(){
            movimiento_pantalla.init();
            
            $('.scroll-pane').jScrollPane();
-
-});
+    });
 }
 </script>
 </head>
@@ -288,7 +301,7 @@ $(document).ready(function(){
                 <div id="img_infonutricional" style="display: none;"></div>
                 <div id="descripcion_producto">
                     <div class="scroll-pane">
-                        <p>KINDER� CHOCOLATE es la tableta de chocolate creada especialmente para los ni�os, ya que 100g de KINDER� CHOCOLATE contienen el calcio y algunas vitaminas de � de litro de leche y toda la garant�a del chocolate KINDER�.</p>
+                        <p>KINDER� CHOCOLATE es la tableta de chocolate creada especialmente para los ni&ntilde;os, ya que 100g de KINDER� CHOCOLATE contienen el calcio y algunas vitaminas de 1/2 de litro de leche y toda la garant&iacute;a del chocolate KINDER�.</p>
                     </div>
                 </div>
             </section>
@@ -356,7 +369,5 @@ $(document).ready(function(){
                 <div id="terminos_condiciones"><a class="term_cond">T&eacute;rminos y Condiciones</a></div>
             </section>
     </div>
-    
-    
 </body>
 </html>

@@ -93,7 +93,9 @@ function init_juegos(){
     
     //bichos2.init();
 
-    serpienteSprite.init( 1200, 770, stage_juegos, canvas_juegos);
+    serpienteSprite.init( 1200, 790, stage_juegos, canvas_juegos);
+
+    addVolcano.init();
     
     lava4.init();
     

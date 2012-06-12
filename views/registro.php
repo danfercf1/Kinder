@@ -12,16 +12,22 @@
         </ul>
         <button class="boton_registro"></button>
     </form>
-    
+    <span class="error_registro" id="mostrar_registro"></span>
 </section>
 
 <script>
     jQuery(function(){
-       jQuery('#form_registro').validate({errorClass: "error_validregistro"}); 
+       jQuery('#form_registro').validate({errorClass: "error_validregistro"});
+       jQuery('#FECHANAC_USUARIO').datepicker({changeYear: true,yearRange:'-90:+0'});
        jQuery('#form_registro').submit(function(){
            if(jQuery('#form_registro').valid()){
                jQuery.post(jQuery(this).attr('action'),jQuery(this).serialize(),function(dato){
-                    jQuery('#fancybox-content').html(dato);
+                   if(dato == 'Ya existe ese e-mail'){
+                       jQuery('#fancybox-content #mostrar_registro').html(dato);
+                   }else{
+                       jQuery('#fancybox-content').html(dato);
+                   }
+
                });
                
            }

@@ -16,7 +16,9 @@ class Frontend_Controller extends FD_Management
     {
         $this->loadView("frontend");
     }
-    
+    /**
+     * Listado de productos
+     */
     function products(){
         
         $query = "SELECT ID_PRODUCTO,NOMBRE_PRODUCTO,IMAGEN_PRODUCTO,DESCRIPCION_PRODUCTO FROM productos WHERE ESTADO_PRODUCTO=1";
@@ -32,7 +34,9 @@ class Frontend_Controller extends FD_Management
         echo $json_productos;
       
     }
-    
+    /**
+     * Listado de sorpresas
+     */
     function surprises(){
         
         //$query = "SELECT ID_SORPRESA,NOMBRE_SORPRESA,IMAGEN_SORPRESA FROM sorpresas WHERE ESTADO_SORPRESA=1";
@@ -48,7 +52,9 @@ class Frontend_Controller extends FD_Management
         echo $json_sorpresas;
         
     }
-    
+    /**
+     * Registro de nuevos usuarios
+     */
     function create(){
         
         if(isset($_POST) && !empty($_POST)){
@@ -63,7 +69,9 @@ class Frontend_Controller extends FD_Management
                   
                   $usuario->pass_usuario = md5($_POST['PASS_USUARIO']);
                   
-                  $usuario->key_usuario = base64_encode($_POST['EMAIL_USUARIO']);  
+                  $usuario->key_usuario = base64_encode($_POST['EMAIL_USUARIO']);
+
+                  $usuario->fechanac_usuario = $this->fecha_mysql($_POST['FECHANAC_USUARIO']);
                   
                   $usuario->tipo_usuario = 3;
                   
@@ -75,24 +83,26 @@ class Frontend_Controller extends FD_Management
                   
                       $this->mailer($usuario->emailp_usuario,$usuario->nombres_usuario,$_POST['PASS_USUARIO'],"","",$usuario->key_usuario,1);  
                   }
-                  
-                  
-                  
+
               }else{
-                  
-                  $this->load_register();
-                  echo '<span class="error_registro">Ya existe ese e-mail</span>';  
+                  //$this->load_register();
+                  echo 'Ya existe ese e-mail';
                  
               }
         }
-     
+
     }
-    
+    /**
+     * Vista registro
+     */
     function load_register(){
         $this->loadView("registro");
     }
     
-    
+    /**
+     * Mensaje de respuesta de registro y login
+     * @param $tipo
+     */
     function register_done($tipo){
         
         switch($tipo){
@@ -114,11 +124,14 @@ class Frontend_Controller extends FD_Management
         $this->loadView("gracias",$dato);
         
     }
-    
+    /**
+     * Envio de mensajes de contacto
+     */
+
     function contacts(){
         
-        $enviado = $this->mailer("sac@ferrero.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
-        //$enviado = $this->mailer("danfercf@gmail.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
+        //$enviado = $this->mailer("sac@ferrero.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
+        $enviado = $this->mailer("danfercf@gmail.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
         
         if($enviado == 1 || $enviado == true){
             $var = 1;
@@ -127,50 +140,51 @@ class Frontend_Controller extends FD_Management
         }
         
     }
-    
+    /**
+     * Confirmacion de Usuarios registrados
+     * @param $key
+     */
     function confirmation($key){
         
         if($key!=""){
-            
-             if(isset($_POST) && !empty($_POST)){
-            
-              $where = "LOGIN_USUARIO='".$_POST['LOGIN_USUARIO']."'";
-                
-              $same = $this->Connection->DB->get_objects("usuario",$where);
-              
-                  if(empty($same)){
-                
-                        $query = "KEY_USUARIO='".$key."'";
-                        
-                        $usuario_confirmacion = $this->Connection->DB->get_object("usuario",$query);
-                        
-                            if($usuario_confirmacion!=''){
-                                
-                                if(isset($_POST) && !empty($_POST)){
-                                    $usuario_confirmacion->merge_values($_POST);
-                                    $usuario_confirmacion->pass_usuario = md5($_POST['PASS_USUARIO']);
-                                    $usuario_confirmacion->estado_usuario = 1;
-                                    $usuario_confirmacion->update();
-                                 }
-                                
-                               
+            $query = "KEY_USUARIO='".$key."'";
+
+            $usuario_confirmacion = $this->Connection->DB->get_object("usuario",$query);
+            $usuario_old = $this->Connection->DB->get_object("usuario",$query);
+
+            if(isset($_POST) && !empty($_POST)){
+                   if($usuario_confirmacion!=''){
+                        if(isset($_POST) && !empty($_POST)){
+                            $usuario_confirmacion->merge_values($_POST);
+
+                            if(isset($_POST['FECHANACP_USUARIO']) && $_POST['FECHANACP_USUARIO'] != ''){
+                                $usuario_confirmacion->fechanacp_usuario = $this->fecha_mysql($_POST['FECHANACP_USUARIO']);
                             }
-                  }else{
-                         echo '<span class="error_registro">Ya existe ese Usuario</span>';
-                  }
+                            $usuario_confirmacion->estado_usuario = 1;
+                            $usuario_confirmacion->update();
+                        }
+                   }
               }
-              $this->loadView('confirmacion');  
-         }
-         //redirect();
+              $data['info'] = $usuario_confirmacion;
+              $this->loadView('confirmacion',$data);
+         }else{
+            $this->redirect('frontend');
+        }
+
         
     }
-    
+    /**
+     * Vista de terminos y condiciones
+     */
     function term_condiciones(){
         
         $this->loadView('term_condiciones');
         
     }
-    
+    /**
+     * Generador de los popups de Informacion nutricional
+     * @param $imagen
+     */
     function info_nutricional($imagen){
         
         if($imagen == 'Kinder Bueno'){
@@ -197,35 +211,45 @@ class Frontend_Controller extends FD_Management
          
         $this->loadView("info_nutricional",$data);
     }
-    
+    /**
+     * Funcion para enviar email
+     * @param $correo
+     * @param string $nombre
+     * @param string $pass
+     * @param string $texto
+     * @param $email_cliente
+     * @param string $key
+     * @param $tipo
+     * @return bool
+     */
     function mailer($correo,$nombre="",$pass="",$texto="",$email_cliente,$key="",$tipo){
         /*$imagen=$this->createAbsoluteUrl('images/logo.png');*/
         /*$index=$this->createAbsoluteUrl('/');*/
         switch ($tipo) {
         
         case 1: 
-        $title="Confirmación de registro!";
+        $title="Confirmar registro!";
         $body='
                     <p>
                     Estimado padre o tutor, su hijo a creado una cuenta gratuita en el Mundo
                     Kinder y para poder comenzar a jugar necesita su permiso. Haga click en el
-                    botón para activar la cuenta de Mundo Kinder.
+                    bot&oacute;n para activar la cuenta de Mundo Kinder.
                     </p>
                     
-                    <p>Botón: <a href="'.ROOT_PATH.'frontend/confirmation/'.$key.'">Activar Cuenta.</a></p>
+                    <p>Bot&oacute;n: <a href="'.ROOT_PATH.'frontend/confirmation/'.$key.'">Activar Cuenta.</a></p>
                     
-                    <p>Se muestra nombre y contraseña de su hijo:</p>
+                    <p>Se muestra nombre y contrase&ntilde;a de su hijo:</p>
                     
                     Nombre: '.$nombre.'</br>
-                    Contraseña: '.$pass.'
+                    Contrase&ntilde;a: '.$pass.'
                     
                     <p>
-                    ¿Qué es Mundo Kinder?
+                    Â¿Qu&eacute; es Mundo Kinder?
                     </br>
                     </br>
-                    Mundo Kinder es la página oficial de los productos Kinder de la empresa
-                    Ferrero. En este mundo su hijo podrá cargar virtualmente los códigos de
-                    los productos Kinder para crear una colección personal.
+                    Mundo Kinder es la p&aacute;gina oficial de los productos Kinder de la empresa
+                    Ferrero. En este mundo su hijo podr&aacute; cargar virtualmente los c&oacute;digos de
+                    los productos Kinder para crear una colecci&oacute;n personal.
                     </p>
                 
         ';
@@ -256,7 +280,12 @@ class Frontend_Controller extends FD_Management
         
         return $exito;
     }
-    
+    /**
+     * Redimensionado de Imagenes en productos
+     * @param $archivo
+     * @param $ancho
+     * @param $alto
+     */
     function resize_image($archivo, $ancho, $alto){
         
         $file_name= IMAGES_PATH."productos/".$archivo;
@@ -265,7 +294,12 @@ class Frontend_Controller extends FD_Management
     	echo $image->getPNG();
         
     }
-    
+    /**
+     * Redimensionado de Imagenes en sorpresas
+     * @param $archivo
+     * @param $ancho
+     * @param $alto
+     */
     function resize_images($archivo, $ancho, $alto){
         
         $file_name= IMAGES_PATH."sorpresas/".$archivo;
@@ -274,23 +308,34 @@ class Frontend_Controller extends FD_Management
     	echo $image->getPNG();
         
     }
-    
+    /**
+     *Cargado de vista para la propaganda en productos
+     */
     function propaganda(){
         $this->loadView("popup_padres");
     }
-    
+    /**
+     * Cargado de vista para la propaganda en home
+     */
     function propaganda_home(){
         $this->loadView("video_propaganda");
     }
-    
+    /**
+     * Cargdo de vista para los nuevos mundos
+     */
     function links_mundos(){
         $this->loadView("mundos_nuevos");
     }
-    
+    /**
+     * Cargado de vista para soporte de Browser
+     */
     function no_soportado(){
         $this->loadView("soporte/soporte");
     }
-    
+
+    /**
+     * Consulta de los eventos registrados
+     */
     function eventos_calendario(){
         $query = "SELECT ID_EVENTO,NOMBRE_EVENTO,FECHA_EVENTO FROM evento";
         
@@ -311,7 +356,11 @@ class Frontend_Controller extends FD_Management
         
         echo $json_evento;
     }
-    
+
+    /**
+     * Informacion acerca de un evento
+     * @param $id
+     */
     function descripcion_evento($id){
         
         $query = "SELECT * FROM evento WHERE ID_EVENTO=".$id;
@@ -324,8 +373,19 @@ class Frontend_Controller extends FD_Management
          
         $this->loadView("descripcion_evento",$data);
     }
-    
-    
+
+    /**
+     * Cambio de fecha normal a fecha mysql
+     * @param $fecha
+     * @return string
+     */
+
+    function fecha_mysql($fecha){
+        $fch=explode("/",$fecha);
+        $fechaMysql = $fch[2]."-".$fch[1]."-".$fch[0];
+        return $fechaMysql;
+    }
+
 }
 	
 ?>

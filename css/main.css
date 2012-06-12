@@ -711,7 +711,7 @@ ul, li {
 #fancybox-close {
     background: url("../images/registro/btnClose.png") no-repeat scroll center center transparent;
     height: 51px;
-    right: 76px;
+    right: 78px;
     top: 139px;
     width: 35px;
     z-index: 1103;
@@ -723,9 +723,12 @@ ul, li {
 
 #content_login{
     background: url("../images/registro/background.png") no-repeat scroll center center transparent;
+    display: block;
     height: 540px;
+    margin: 0 auto;
     overflow: hidden;
     padding: 200px 0 0;
+    position: relative;
     width: 610px;
 }
 
@@ -776,7 +779,7 @@ ul, li {
     height: 30px;
     margin-left: 18px;
     padding: 0 10px;
-    width: 165px;
+    width: 200px;
 }
 
 #content_login #form_login .links{
@@ -831,17 +834,15 @@ ul, li {
 }
 
 #content_gracias .tituloGracias .titulo_grande{
-    
+
     color: #FFCC02;
+    display: block;
     font-family: Arial Rounded MT Bold;
     font-size: 25px;
     font-weight: bold;
-    /*position: absolute;*/
     position: relative;
     text-align: center;
-    text-shadow: 0.05em 0.05em 0.05em #333;
-    top: 168px;
-    left: 345px;
+    text-shadow: 0.05em 0.05em 0.05em #333333;
        
 }
 
@@ -878,14 +879,14 @@ ul, li {
 }
 
 .error_registro{
-    
-    bottom: 87px;
     color: #FF0000;
+    display: block;
     font-family: Arial Rounded MT Bold;
     font-size: 20px;
     font-weight: bold;
-    left: 200px;
-    position: absolute;
+    margin-top: 7px;
+    position: relative;
+    text-align: center;
 }
 
 /***
@@ -984,7 +985,7 @@ section#content_confirmacion{
 }
 
 #content_confirmacion .fondo_ipad .datos .informe_legal p{
-    font-size: 7.8pt;
+    font-size: 8.5pt;
 }
 
 
@@ -994,7 +995,8 @@ section#content_confirmacion{
 
 #content_confirmacion .fondo_ipad .datos .botones_formulario{
     clear: both;
-    text-align: right;
+    margin-top: 55px;
+    text-align: center;
 }
 
 #content_confirmacion .fondo_ipad .datos .botones_formulario button{
@@ -1004,9 +1006,9 @@ section#content_confirmacion{
     -webkit-border-radius: 15px;
     border: 2px solid #8A9C9F;
     cursor: pointer;
-    color: #DC3E00;
+    color: #000000;
     font-weight: bold;
-    font-size: 8pt;
+    font-size: 12pt;
 }
 
 /***FIN confirmacion***/

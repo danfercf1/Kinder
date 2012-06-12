@@ -990,7 +990,39 @@ var cohete9 = new function(){
     }
  
 }
+/**
+ *
+ * @type {function(){
 
+ }
+ */
+
+var addVolcano = new function(){
+    this.obj = new Container();
+
+    this.addVolcano_img = new Bitmap("images/juegos/volcanoImg.png");
+
+    this.init = function(){
+
+        stage_juegos.addChild(addVolcano.obj);
+        this.init_addVolcano();
+        this.resize();
+
+    }
+
+    this.init_addVolcano = function(){
+        addVolcano.obj.addChild(addVolcano.addVolcano_img);
+
+    }
+
+
+    this.resize = function(){
+
+        addVolcano.obj.x = (canvas_juegos.width/2) + 246;
+        addVolcano.obj.y = (canvas_juegos.height/2) + 296;
+
+    }
+}
 /**
  *  Sprite Serpientes
  * @type {function(){

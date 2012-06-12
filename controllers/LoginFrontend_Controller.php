@@ -11,10 +11,9 @@ class LoginFrontend_Controller extends FD_Management
         $this->loadView("login_frontend");
     }
     
-    function load_login($datos="")
+    function load_login()
     {
-        $data['confirmacion'] = $datos;
-        $this->loadView("login_frontend",$data);
+        $this->loadView("login_frontend");
     }
     
     function logout()
@@ -24,16 +23,18 @@ class LoginFrontend_Controller extends FD_Management
     
     function access()
     {
+        $datos = "";
         if($this->Session->login($_POST["LOGIN_USUARIO"], $_POST["PASS_USUARIO"],3))
         {
-            $datos = "correcto";
-            $this->load_login($datos);
+            /*$datos = "correcto";
+            /*$this->load_login($datos);*/
             //$logeado="true";
             //$this->redirect("/");
+            echo 'correcto';
              
         }else {
             
-            $this->load_login();
+            echo "Datos incorrectos!";
              
         }
     }

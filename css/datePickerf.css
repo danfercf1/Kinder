@@ -189,3 +189,33 @@ td.datepickerSpecial a {
 td.datepickerSpecial.datepickerSelected a {
 	background: #a00;
 }
+/**
+** Agregados por daniel
+**/
+.ui-widget-header {
+    background: url("../images/registro/bgDatepicker.png") repeat scroll 0 0 #CCCCCC;
+    border: 1px solid #AAAAAA;
+    color: #222222;
+    font-weight: bold;
+}
+.ui-widget-content {
+    background-color: #FFFDDD;
+    border: 1px solid #AAAAAA;
+    color: #08A8C0;
+}
+.ui-datepicker table {
+    background-color: #FFFDDD;
+    font-size: 0.6em;
+}
+
+.ui-state-default {
+    color: #08A8C0;
+}
+
+.ui-datepicker {
+    padding: 0.1em 0.1em 0;
+    width: 14em;
+}
+.ui-corner-all {
+    border-radius: 15px 15px 15px 15px;
+}
