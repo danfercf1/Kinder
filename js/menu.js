@@ -77,15 +77,32 @@ var menu = new function()
           }, t, function()
            {
              $(obj).stop().animate
-                ({
-                    
-                    
-                } , 0  ) ;
+                ({ } , 0  ) ;
                   
              
           });
     }
-    
-    
-    
+
+    this.mostrarMenu = function(){
+        jQuery('#menu_soy_chico li').each(function(li){
+            jQuery(this).css('left',-10);
+        });
+    }
+
+    this.ocultarMenu = function(){
+        var distancia;
+        var t = 0;
+        jQuery('#menu_soy_chico li').each(function(li){
+            distancia = (jQuery(this).width()-22)*-1;
+            t+=500;
+            //jQuery(this).css('left',distancia);
+            jQuery(this).animate({
+                left: distancia
+            }, t, function()
+            {
+                $(this).stop().animate
+                    ({ } , 0  ) ;
+            });
+        });
+    }
 }

@@ -110,11 +110,6 @@
 
 <script type="text/javascript">
 
-    /*var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-29837586-1']);
-    _gaq.push(['_trackPageview']);
-    */
-
     var _gaq = _gaq || [];
 
     _gaq.push(
@@ -179,10 +174,15 @@ $(document).ready(function(){
                 //$('#qLoverlay').remove();
                 
                 var z = 1;
-                    
+
+                menu.mostrarMenu();
+
+                setTimeout(function(){
+                    menu.ocultarMenu();
+                },5000);
+
                 <?php if( !isset( $_COOKIE['menu'] ) ){ ?>
-                
-                
+
                 var intervalo = setInterval(function(){
                     if( z <= 3){
                         setTimeout(function(){
@@ -209,16 +209,10 @@ $(document).ready(function(){
                             jQuery('#link_juegos').trigger('mouseover');
                             jQuery('#link_juegos').trigger('mouseout');
                         },5000);
-                            
                     }
                     z++;
-                    
-                    
-                    
                 },7000);
-                
-               
-                
+
                 <?php }
                      
                 ?>
@@ -227,8 +221,6 @@ $(document).ready(function(){
                     $tiempo = time() + (2*60*60);
                     setcookie("menu",$tiempo);
                 ?>
-                
-                <?php //$_SESSION['refresh']='activo';?>
                 
                 jQuery('body').css('overflow-y','visible');
                 

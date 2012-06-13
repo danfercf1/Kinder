@@ -130,8 +130,8 @@ class Frontend_Controller extends FD_Management
 
     function contacts(){
         
-        //$enviado = $this->mailer("sac@ferrero.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
-        $enviado = $this->mailer("danfercf@gmail.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
+        $enviado = $this->mailer("sac@ferrero.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
+        //$enviado = $this->mailer("danfercf@gmail.com",$_POST['form_contacto_nom_ap'],"",$_POST['txa_texto'],$_POST['form_contacto_email'],"",2);
         
         if($enviado == 1 || $enviado == true){
             $var = 1;
@@ -253,6 +253,10 @@ class Frontend_Controller extends FD_Management
                     </p>
                 
         ';
+        /*$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+        $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $cabeceras .= 'From: webmaster@kinder.com.ar' . "\r\n";
+        $cabeceras .= 'Reply-To: webmaster@example.com' . "\r\n";*/
         break;
         case 2:
         $title="Email contacto";
@@ -263,6 +267,7 @@ class Frontend_Controller extends FD_Management
                 
                 
         ';
+
         break;
         }
         $html="<html>
@@ -272,10 +277,10 @@ class Frontend_Controller extends FD_Management
                 
                <body>$body</body>
                </html>";
-        
+
         $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
         $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        
+
         $exito = mail($correo,$title,$html,$cabeceras);
         
         return $exito;
@@ -321,7 +326,7 @@ class Frontend_Controller extends FD_Management
         $this->loadView("video_propaganda");
     }
     /**
-     * Cargdo de vista para los nuevos mundos
+     * Cargado de vista para los nuevos mundos
      */
     function links_mundos(){
         $this->loadView("mundos_nuevos");
