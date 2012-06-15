@@ -112,6 +112,17 @@
 
     var _gaq = _gaq || [];
 
+    /**Kinder.com.ar**/
+
+    /*
+        _gaq.push(
+        ['_setAccount', 'UA-29837586-1'],
+        ['_trackPageview']
+    );
+    */
+
+    /**Kinder Test**/
+
     _gaq.push(
         ['_setAccount', 'UA-32602622-1'],
         ['_trackPageview']

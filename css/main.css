@@ -686,6 +686,13 @@ ul, li {
     width: 135px;
 }
 
+#content_registro #lista_formulario .mensaje_activacion{
+    color: #DA4720;
+    font-family: Arial Rounded MT Bold;
+    padding: 0 0 0 90px;
+    text-align: justify;
+}
+
 .boton_registro{
     background: url("../images/registro/btnEnter.png") no-repeat scroll 0 0 transparent;
     border: medium none;
@@ -750,7 +757,7 @@ ul, li {
 
 #content_login #form_login #lista_formulario{
     overflow: hidden;
-    padding: 140px 60px 0 194px;
+    padding: 140px 60px 0 130px;
 }
 
 #content_login #form_login #lista_formulario li{
@@ -783,13 +790,14 @@ ul, li {
     width: 200px;
 }
 
+
 #content_login #form_login .links{
     background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
     color: #F8442B;
     cursor: pointer;
     font-family: Arial Rounded MT Bold;
     font-size: 18px;
-    margin-left: 224px;
+    margin-left: 148px;
     padding: 0 0 0 24px;
 }
 
@@ -941,18 +949,17 @@ section#content_confirmacion{
     text-align: center;
 }
 
-#content_confirmacion .fondo_ipad p.texto_confirmacion{
-    font-size: 10pt;
-    margin: 35px 0 0;
-    color: #DC3E00;
-}
-
 #content_confirmacion .fondo_ipad .datos_login{
     margin: 75px 0 0;
 }
 
-#content_confirmacion .fondo_ipad .datos p{
+/*#content_confirmacion .fondo_ipad .datos p{
     font-size: 9.5pt;
+}*/
+#content_confirmacion .fondo_ipad .texto_confirmacion{
+    font-size: 17.5pt;
+    margin: 35px 0 0;
+    color: #DC3E00;
 }
 
 #content_confirmacion .fondo_ipad .datos li{
@@ -961,18 +968,23 @@ section#content_confirmacion{
 
 
 #content_confirmacion .fondo_ipad .datos .informe_legal{
-    height: 340px;
+    height: 560px;
+    display: block;
+    position: relative;
+
 }
 
+
 #content_confirmacion .fondo_ipad .datos .informe_legal #texto_legal{
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    background: url("../images/registro/confirmar/legalBG.jpg") repeat scroll 0 0 transparent;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: url("../images/registro/confirmar/legalBG.jpg") repeat fixed 0 0 transparent;
     border: 2px solid #8A9C9F;
     padding: 2px 5px;
     resize: none;
     width: 650px;
+    height: 500px;
 }
 
 #content_confirmacion .fondo_ipad .datos .informe_legal .radios .confirmacion{

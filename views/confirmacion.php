@@ -5,17 +5,23 @@
     <link href="<?php echo CSS_PATH;?>main.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo CSS_PATH;?>datePickerf.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo CSS_PATH;?>jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" />
-    
-    
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo CSS_PATH;?>jScrollPane.css" />
+
+
+
     <!--<link href="<?php echo CSS_PATH;?>layout.css" rel="stylesheet" type="text/css" />-->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.ui.datepicker-es.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH;?>datepicker.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH;?>jScrollPane.js"></script>
+
     <style>
         body{
             background: #808080;
+            overflow-y: scroll;
         }
         .error_registro{
              left: 590px;
@@ -33,73 +39,46 @@
             <p class="texto_confirmacion">
                 Su hijo se ha registrado en el sitio www.Kinder.com.ar y necesita que usted active su cuenta para empezar a coleccionar las sorpresas virtuales.
             </p>
-            <div class="datos_login">
-                <p>Los datos de la cuenta de su hijo son los siguientes:</p>
-                <ul>
-                    <li>
-                        <label for="LOGIN_USUARIO" class="texto_rojo">Email:</label>
-                        <span id="LOGIN_USUARIO" name="LOGIN_USUARIO" type="text" class="texto_rojo"><?php if(isset($_POST['LOGIN_USUARIO'])){echo $_POST['LOGIN_USUARIO'];}else{ echo $info->email_usuario;}?></span>
-                    </li>
-                    <!--<li>
-                        <label for="PASS_USUARIO" class="texto_rojo">Contrase&ntilde;a:</label>
-                        <span><a id="cambiarPass" href="#" class="texto_rojo">Cambiar</a></span>
-                        <input id="PASS_USUARIO" name="PASS_USUARIO" type="password" class="class_input" value="" style="display: none"/>
-                    </li>-->
-                </ul>
-            </div>
-            <div class="datos_usuario">
-                <p>Tambi&eacute;n pod&eacute;s dejarnos tus datos, as&iacute; podemos informarte acerca de las novedades del Mundo Kinder</p>
-                <ul>
-                         <li>
-                                <label for="NOMBRESP_USUARIO" class="texto_rojo">Nombre:</label>
-                                <input id="NOMBRESP_USUARIO" name="NOMBRESP_USUARIO" type="text" class="class_input required" value="<?php echo $_POST['NOMBRESP_USUARIO']?>"/>
-                         </li> 
-                         <li>
-                            <label for="EMAILP_USUARIO" class="texto_rojo">Email:</label>
-                            <input id="EMAILP_USUARIO" name="EMAILP_USUARIO" type="text" class="class_input required" value="<?php echo $_POST['EMAILP_USUARIO']?>"/>
-                         </li>
-                         <li>
-                            <label for="FECHANACP_USUARIO" class="texto_rojo">Fecha de nacimiento:</label>
-                            <input id="FECHANACP_USUARIO" name="FECHANACP_USUARIO" type="text" class="class_input required" value="<?php echo $_POST['FECHANACP_USUARIO']?>"/>
-                         </li>
-                 </ul>
-            </div>
+
             <div class="informe_legal">
-                <p>Lee el informe legal sobre el tratamiento de los datos personales</p>
-                <textarea id="texto_legal" name="texto_legal" readonly="readonly"></textarea>
-                <p>Doy consentimiento para la activaci&oacute;n del registro al Sitio para acceder a las &aacute;reas y participar en las iniciativas reservadas a los inscritos al Sitio; para el env&iacute;o de la newsletter con contenidos editoriales e informaci&oacute;n relacionada con la actividad del Sitio, la participaci&oacute;n en concursos y operaciones promocionales;:</p>
-                
-                <section class="radios">
-                    
-                    <input type="radio" name="NEWSLETTER_USUARIO" value="1" class="input_radios" /><label class="confirmacion">SI</label>
-                    
-                                         
-                    <input type="radio" name="NEWSLETTER_USUARIO" value="0" class="input_radios" checked="checked"/><label class="confirmacion">NO</label>
-                </section>
-            
-                <p>Doy consentimiento para el env&iacute;o, incluso a trav&eacute;s de correo electr&eacute;nico (e-mail) de informaci&oacute;n y ofertas comerciales, newsletter, material publicitario e informativo de MPG, de otras sociedades pertenecientes al Grupo Ferrero y de sociedades terceras asociadas al Grupo Ferrero;:</p>
-                
-                <section class="radios">
-                    <input type="radio" name="OFERTAS_USUARIO" value="1" /><label class="confirmacion">SI</label> 
-                    <input type="radio" name="OFERTAS_USUARIO" value="0" checked="checked"/><label class="confirmacion">NO</label>
-                </section>
-                
-                <p>Doy consentimiento para la recopilaci&oacute;n de datos e informaci&oacute;n en general y particular sobre orientaciones y preferencias de consumo para la definici&oacute;n de perfiles individuales y de grupo con fines estad&iacute;sticos y comerciales, que tenga como objetivo mejorar la oferta de nuestros servicios y productos.:</p>
-                <section class="radios">
-                    <input type="radio" name="INFORMACION_USUARIO" value="1"/><label class="confirmacion">SI</label> 
-                    <input type="radio" name="INFORMACION_USUARIO" value="0" checked="checked"/><label class="confirmacion">NO</label>
-                </section>
-                
+                <p>Lee y acepta la pol&iacute;tica de privacidad sobre el tratamiento de los datos: </p>
+                <textarea id="texto_legal" name="texto_legal" readonly="readonly">
+                    La utilizaci&oacute;n del presente sitio web por parte de Uds. o de sus hijos est&aacute; sujeta a estos T&eacute;rminos de Uso y pol&iacute;tica de privacidad. Estos T&eacute;rminos de Uso podr&aacute;n ser alterados en cualquier momento sin necesidad de comunicaci&oacute;n alguna. La continuidad en el uso del sitio despu&eacute;s que se haya realizado cualquier modificaci&oacute;n de las presentes condiciones de uso significar&aacute; la aceptaci&oacute;n de la versi&oacute;n actualizada de los nuevos T&eacute;rminos de Uso. Por esta raz&oacute;n, recomendamos revisar estos T&eacute;rminos de Uso cada vez que utilice este sitio web.
+                    El presente sitio de internet contiene informaci&oacute;n espec&iacute;fica como as&iacute; tambi&eacute;n contenidos para ser descargados. El titular de este sitio se reserva el derecho de cesar en la operaci&oacute;n del mismo, total o parcialmente.
+                    Al registrarse se les solicita los siguientes datos: Nombre de usuario, La edad, una contrase&ntilde;a y el correo electr&oacute;nico de unos de los padres para realizar la activaci&oacute;n de la cuenta. La falta de veracidad de estos datos implicar&aacute; dejar sin efecto la registraci&oacute;n.
+                    Para activar la cuenta se enviar&aacute; un correo electr&oacute;nico al padre del usuario en donde se le comunica que su hijo se est&aacute; registrando en ww.kinder.com.ar, y se le muestra el nombre de usuario y contrase&ntilde;a. El nombre de usuario y contrase&ntilde;a son personales y solo podr&aacute;n ser usados por el menor o por sus padres para verificar el funcionamiento de la cuenta. El activar la cuenta implica la aceptaci&oacute;n las condiciones legales y la pol&iacute;tica de privacidad
+                    Los datos que Uds. nos facilita se usaran para permitir su participaci&oacute;n en el sitio, y para hacerle ofertas de productos de la empresa. NO ser&aacute;n compartidos con terceros. La base de datos de Ferrero est&aacute; registrada en la Direcci&oacute;n Nacional de Protecci&oacute; de Datos personales.
+                    El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un inter&eacute;s leg&iacute;timo al efecto conforme lo establecido en el art&iacute;culo 14, inciso 3 de la Ley N&deg; 25.326.
+                    La DIRECCION NACIONAL DE PROTECCION DE DATOS PERSONALES, Organo de Control de la Ley N&deg; 25.326, tiene la atribuci&oacute;n de atender las denuncias y reclamos que se interpongan con relaci&oacute;n al incumplimiento de las normas sobre protecci&oacute;n de datos personales.
+                    Ferrero de reserva el derecho de borrar una cuenta en cualquier motivo sin explicaci&oacute;n de causa.
+                    Los contenidos provistos en este sitio, incluyendo toda la informaci&oacute;n, videos, fotograf&iacute;as, ilustraciones, nombres y logos son propiedad de FERRERO y/o sus contratistas y est&aacute;n protegidos por derechos de autor, la legislaci&oacute;n marcaria y otros derechos de propiedad intelectual e industrial. Los contenidos son &uacute;nicamente para uso personal y no comercial. Los contenidos del sitio web descriptos arriba no pueden ser modificados, copiados, reproducidos, vendidos, alquilados, licenciados, usados, ampliados o utilizados de cualquier forma sin el previo consentimiento escrito del titular de los derechos.
+                    Cualquier acuerdo complementario requiere que se realice en forma escrita. El usuario acuerda someterse por cualquier divergencia respecto del uso del sitio y/o sus contenidos a los Tribunales Ordinarios de la Capital Federal.
+
+                </textarea>
+                <!--<div id="texto_legal" class="scroll-pane">
+                    La utilizaci&oacute;n del presente sitio web por parte de Uds. o de sus hijos est&aacute; sujeta a estos T&eacute;rminos de Uso y pol&iacute;tica de privacidad. Estos T&eacute;rminos de Uso podr&aacute;n ser alterados en cualquier momento sin necesidad de comunicaci&oacute;n alguna. La continuidad en el uso del sitio despu&eacute;s que se haya realizado cualquier modificaci&oacute;n de las presentes condiciones de uso significar&aacute; la aceptaci&oacute;n de la versi&oacute;n actualizada de los nuevos T&eacute;rminos de Uso. Por esta raz&oacute;n, recomendamos revisar estos T&eacute;rminos de Uso cada vez que utilice este sitio web.
+                    El presente sitio de internet contiene informaci&oacute;n espec&iacute;fica como as&iacute; tambi&eacute;n contenidos para ser descargados. El titular de este sitio se reserva el derecho de cesar en la operaci&oacute;n del mismo, total o parcialmente.
+                    Al registrarse se les solicita los siguientes datos: Nombre de usuario, La edad, una contrase&ntilde;a y el correo electr&oacute;nico de unos de los padres para realizar la activaci&oacute;n de la cuenta. La falta de veracidad de estos datos implicar&aacute; dejar sin efecto la registraci&oacute;n.
+                    Para activar la cuenta se enviar&aacute; un correo electr&oacute;nico al padre del usuario en donde se le comunica que su hijo se est&aacute; registrando en ww.kinder.com.ar, y se le muestra el nombre de usuario y contrase&ntilde;a. El nombre de usuario y contrase&ntilde;a son personales y solo podr&aacute;n ser usados por el menor o por sus padres para verificar el funcionamiento de la cuenta. El activar la cuenta implica la aceptaci&oacute;n las condiciones legales y la pol&iacute;tica de privacidad
+                    Los datos que Uds. nos facilita se usaran para permitir su participaci&oacute;n en el sitio, y para hacerle ofertas de productos de la empresa. NO ser&aacute;n compartidos con terceros. La base de datos de Ferrero est&aacute; registrada en la Direcci&oacute;n Nacional de Protecci&oacute; de Datos personales.
+                    El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un inter&eacute;s leg&iacute;timo al efecto conforme lo establecido en el art&iacute;culo 14, inciso 3 de la Ley N&deg; 25.326.
+                    La DIRECCION NACIONAL DE PROTECCION DE DATOS PERSONALES, Organo de Control de la Ley N&deg; 25.326, tiene la atribuci&oacute;n de atender las denuncias y reclamos que se interpongan con relaci&oacute;n al incumplimiento de las normas sobre protecci&oacute;n de datos personales.
+                    Ferrero de reserva el derecho de borrar una cuenta en cualquier motivo sin explicaci&oacute;n de causa.
+                    Los contenidos provistos en este sitio, incluyendo toda la informaci&oacute;n, videos, fotograf&iacute;as, ilustraciones, nombres y logos son propiedad de FERRERO y/o sus contratistas y est&aacute;n protegidos por derechos de autor, la legislaci&oacute;n marcaria y otros derechos de propiedad intelectual e industrial. Los contenidos son &uacute;nicamente para uso personal y no comercial. Los contenidos del sitio web descriptos arriba no pueden ser modificados, copiados, reproducidos, vendidos, alquilados, licenciados, usados, ampliados o utilizados de cualquier forma sin el previo consentimiento escrito del titular de los derechos.
+                    Cualquier acuerdo complementario requiere que se realice en forma escrita. El usuario acuerda someterse por cualquier divergencia respecto del uso del sitio y/o sus contenidos a los Tribunales Ordinarios de la Capital Federal.
+
+                </div>-->
+                <p><input type="checkbox" name="acepto_politicas" id="acepto_politicas" class="required"/><span>ACEPTO LAS POLITICAS DE PRIVACIDAD</span></p>
             </div>
             
             <div class="botones_formulario">
-                <button id="reset" type="reset">ANULAR</button>
                 <button id="submit" type="submit">ACTIVAR</button>
             </div>
             
         </div>
-       </form>
     </section>
+    </form>
+
     
 </section>
 
@@ -107,25 +86,10 @@
 
 <script>
     jQuery(document).ready(function(){
-        
-        jQuery('#FECHANAC_USUARIO').datepicker({changeYear: true,yearRange:'-90:+0'});
-        
-        jQuery('#FECHANACP_USUARIO').datepicker({changeYear: true,yearRange:'-90:+0'});
 
-        /*jQuery('#cambiarPass').click(function(){
-            jQuery('#PASS_USUARIO').show();
-            jQuery('#cambiarPass').hide();
-        });
-        */
-        /*jQuery.fn.resetForm = function () {
-            $(this).each (function() { this.reset(); });
-        }
-        
-        jQuery('#reset').click(function(){
-            jQuery('#registro_padres').resetForm();
-        });
-        */
         jQuery('#registro_padres').validate({errorClass: "error_validregistro"});
+
+        jQuery('#texto_legal').jScrollPane();
     });
 </script>
 </html>

@@ -59,7 +59,7 @@ class Frontend_Controller extends FD_Management
         
         if(isset($_POST) && !empty($_POST)){
             
-              $where = "EMAIL_USUARIO='".$_POST['EMAIL_USUARIO']."'";
+              $where = "LOGIN_USUARIO='".$_POST['LOGIN_USUARIO']."'";
                 
               $same = $this->Connection->DB->get_objects("usuario",$where);
               
@@ -69,10 +69,8 @@ class Frontend_Controller extends FD_Management
                   
                   $usuario->pass_usuario = md5($_POST['PASS_USUARIO']);
                   
-                  $usuario->key_usuario = base64_encode($_POST['EMAIL_USUARIO']);
+                  $usuario->key_usuario = base64_encode($_POST['LOGIN_USUARIO']);
 
-                  $usuario->fechanac_usuario = $this->fecha_mysql($_POST['FECHANAC_USUARIO']);
-                  
                   $usuario->tipo_usuario = 3;
                   
                   $usuario->estado_usuario = 0;
@@ -81,12 +79,12 @@ class Frontend_Controller extends FD_Management
                   
                       $this->register_done("");
                   
-                      $this->mailer($usuario->emailp_usuario,$usuario->nombres_usuario,$_POST['PASS_USUARIO'],"","",$usuario->key_usuario,1);  
+                      $this->mailer($usuario->emailp_usuario,$usuario->login_usuario,$_POST['PASS_USUARIO'],"","",$usuario->key_usuario,1);
                   }
 
               }else{
                   //$this->load_register();
-                  echo 'Ya existe ese e-mail';
+                  echo 'Ya existe ese usuario';
                  
               }
         }
@@ -155,11 +153,9 @@ class Frontend_Controller extends FD_Management
             if(isset($_POST) && !empty($_POST)){
                    if($usuario_confirmacion!=''){
                         if(isset($_POST) && !empty($_POST)){
-                            $usuario_confirmacion->merge_values($_POST);
 
-                            if(isset($_POST['FECHANACP_USUARIO']) && $_POST['FECHANACP_USUARIO'] != ''){
-                                $usuario_confirmacion->fechanacp_usuario = $this->fecha_mysql($_POST['FECHANACP_USUARIO']);
-                            }
+                            //$usuario_confirmacion->merge_values($_POST);
+
                             $usuario_confirmacion->estado_usuario = 1;
                             $usuario_confirmacion->update();
                         }
@@ -240,8 +236,8 @@ class Frontend_Controller extends FD_Management
                     
                     <p>Se muestra nombre y contrase&ntilde;a de su hijo:</p>
                     
-                    Nombre: '.$nombre.'</br>
-                    Contrase&ntilde;a: '.$pass.'
+                    <p>Usuario: '.$nombre.'</p>
+                    <p>Contrase&ntilde;a: '.$pass.'</p>
                     
                     <p>
                     ¿Qu&eacute; es Mundo Kinder?
