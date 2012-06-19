@@ -24,7 +24,7 @@
             <p>
                 <!--<div id="map" style="width: 500px; height: 400px;"></div>-->
                 <label for="LUGAR_EVENTO"><strong>Lugar</strong></label><br/>
-                <input type="text" id="LUGAR_EVENTO" class="inputbox required" name="LUGAR_EVENTO" value="<?php echo $_POST['LUGAR_EVENTO']?>" /> <br />
+                <input type="text" id="LUGAR_EVENTO" class="inputbox" name="LUGAR_EVENTO" value="<?php echo $_POST['LUGAR_EVENTO']?>" /> <br />
             </p>
                 
             <p>

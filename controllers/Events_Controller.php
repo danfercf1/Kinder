@@ -57,7 +57,7 @@ class Events_Controller extends Main_Controller
                 
               $same = $this->Connection->DB->get_objects("evento",$where);
               
-              if(empty($same)){
+              if(true){
                 
                   $replace = explode("/",$_POST['FECHA_EVENTO'],3);
                   
