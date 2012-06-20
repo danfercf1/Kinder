@@ -153,11 +153,13 @@ class Frontend_Controller extends FD_Management
             if(isset($_POST) && !empty($_POST)){
                    if($usuario_confirmacion!=''){
                         if(isset($_POST) && !empty($_POST)){
-
                             //$usuario_confirmacion->merge_values($_POST);
-
                             $usuario_confirmacion->estado_usuario = 1;
                             $usuario_confirmacion->update();
+                            $enviado = $this->mailer($usuario_old->emailp_usuario,'','','','','',3);
+                            if($enviado==1){
+                                header( 'Location: '.ROOT_PATH );
+                            }
                         }
                    }
               }
@@ -264,6 +266,12 @@ class Frontend_Controller extends FD_Management
                 
         ';
 
+        break;
+        case 3:
+                $title="Cuenta confirmada";
+                $body='
+                <p>Su cuenta en el sitio Kinder ha sido confirmada correctamente</p>
+                ';
         break;
         }
         $html="<html>

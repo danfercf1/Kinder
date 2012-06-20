@@ -89,7 +89,7 @@
 
         jQuery('#registro_padres').validate({errorClass: "error_validregistro"});
 
-        jQuery('#texto_legal').jScrollPane();
+        //jQuery('#texto_legal').jScrollPane();
     });
 </script>
 </html>
