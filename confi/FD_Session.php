@@ -72,10 +72,11 @@ class FD_Session
 	{
         session_destroy();
         
-		if($routeIndex)
+		/*if($routeIndex)
 			header("Location: ".ROOT_PATH.$routeIndex);		
         else
 			header("Location: ".ROOT_PATH);
+		*/
 	}
     
     function unset_data($key)

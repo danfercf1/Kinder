@@ -672,7 +672,7 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
         
         obj.onClick = function(evt){
             
-          
+             console.log(obj);
         }
     }
     
@@ -746,6 +746,24 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                 
            }
     }
+
+    this.puntero_obj = function(objeto){
+
+        objeto.onMouseOver = function(){
+
+            oncanvas_home.mouse.cursor("pointer");
+
+            stage.update();
+
+        }
+
+        objeto.onMouseOut = function(){
+
+            oncanvas_home.mouse.cursor("default");
+            stage.update();
+
+        }
+    }
     
     this.objeto_fancy = function(objeto,url){
             
@@ -753,6 +771,23 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                 jQuery.fancybox({'href':url,'showCloseButton':true,'opacity':true});
                 
             }
+    }
+
+    this.obj_fancy = function(objeto,url){
+
+        objeto.onClick = function(){
+            jQuery.fancybox({'href':url,'showCloseButton':true,'opacity':true});
+
+        }
+    }
+
+    this.cerrarSesion = function(obj){
+
+        obj.onClick = function(evt){
+            jQuery.post('loginfrontend/logout',function(){
+                location.href = '/';
+            });
+        }
     }
          
 

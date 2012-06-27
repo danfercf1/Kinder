@@ -46,8 +46,16 @@ function init_home()
     pajaro_amarillo_4.init() ;
     pajaro_amarillo_5.init();
     pajaro_en_suelo.init() ;
-  
-    registrate.init() ;  
+
+    if(USER != '' && USER !='undefined' && USER !=null){
+        placa_usuario.init();
+        animacion_home.puntero_obj(placa_usuario.logoutImg);
+        animacion_home.puntero_obj(placa_usuario.btnLoadImg);
+        animacion_home.cerrarSesion(placa_usuario.logoutImg);
+        animacion_home.obj_fancy(placa_usuario.btnLoadImg,'LoginFrontend/loadCode');
+    }else{
+        registrate.init();
+    }
     logo_kinder.init() ;
     //soy_padre.init();
     flores_1.init();
@@ -69,6 +77,8 @@ function init_home()
     /**Cartel Propaganda**/
 
     arbol.init();
+
+
         
 
      // *************** ANIMACION DE NUBES **************************

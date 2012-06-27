@@ -64,6 +64,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>home/main_home.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>home/objetos_home.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>home/animacion.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>home/userLogin.js"></script>
 
 <script type="text/javascript" src="<?php echo JS_PATH;?>verde/objetos_verde.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>verde/main_verde.js"></script>
@@ -108,6 +109,8 @@
 
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.jscrollpane.min.js"></script>
 
+
+
 <script type="text/javascript">
 
     var _gaq = _gaq || [];
@@ -139,6 +142,7 @@
 
 <script>
 var ROOT_PATH  = "<?php echo ROOT_PATH; ?>";
+var USER <?php if(isset($_SESSION["ULOGIN_SESSION"]) != ''){echo '= "'.$_SESSION["ULOGIN_SESSION"].'";';}?>;
 
 if (!Modernizr.canvas){
         window.location = ROOT_PATH+'frontend/no_soportado';

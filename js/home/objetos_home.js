@@ -131,7 +131,7 @@ var registrate = new function()
         registrate.obj.y = (canvas_home.height) - 276 ;
     }
 
-}
+};
 
 var logo_kinder = new function()
 {
@@ -1362,5 +1362,98 @@ var propaganda = new function(){
        
     }
     
-}
+};
+
+var placa_usuario = new function(){
+
+    this.obj = new Container();
+
+    this.placa_usuario_img = new Bitmap("images/images_home/userLogged.png");
+
+    this.logoutImg = new Bitmap("images/images_home/userLogout.png");
+
+    this.btnLoadImg = new Bitmap("images/images_home/btnLoad.png");
+
+
+    this.init = function(){
+
+        stage.addChild(placa_usuario.obj);
+        this.init_placa_usuario();
+        this.initUserLogout();
+        if(USER != '' && USER !='undefined' && USER !=null){
+            this.initNombreUsuario(USER);
+            this.initBtnLoad();
+            this.initCantidadSorpresas();
+        }
+        this.resize();
+
+    }
+
+    this.init_placa_usuario = function(){
+        placa_usuario.obj.addChild(placa_usuario.placa_usuario_img);
+    }
+
+    this.initNombreUsuario = function(nomUser){
+
+        var texto =  new Text (nomUser, 'Bold 25px Futura' , '#FFFFFF');
+
+        texto.maxWidth = 118;
+
+        var s = new Shape(texto);
+
+        s.x = 95;
+
+        s.y = 55;
+
+        placa_usuario.obj.addChild(s);
+    }
+
+    this.initUserLogout = function(){
+
+        placa_usuario.logoutImg.x = 205;
+        placa_usuario.logoutImg.y = 14;
+
+        placa_usuario.obj.addChild(placa_usuario.logoutImg);
+
+    }
+
+    this.initBtnLoad = function(){
+
+        placa_usuario.btnLoadImg.x = 100;
+        placa_usuario.btnLoadImg.y = 65;
+
+        placa_usuario.obj.addChild(placa_usuario.btnLoadImg);
+
+    }
+
+    this.initCantidadSorpresas = function(){
+
+        jQuery.post('loginFrontend/retrieveQsurprises',function(data){
+
+            var q = jQuery.parseJSON(data);
+
+            console.log(q);
+
+            var texto =  new Text (q.cantidad+'/35', 'Bold 25px Arial' , '#f26529');
+
+            texto.maxWidth = 60;
+
+            var s = new Shape(texto);
+
+            s.x = 297;
+
+            s.y = 84;
+
+            placa_usuario.obj.addChild(s);
+        });
+    }
+
+    this.resize = function()
+    {
+        placa_usuario.obj.x = 850;
+        placa_usuario.obj.y = 820;
+    }
+
+};
+
 

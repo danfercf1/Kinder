@@ -29,8 +29,10 @@ jQuery('#form_login').validate({errorClass: "error_validregistro"});
                jQuery.post(jQuery(this).attr('action'),jQuery(this).serialize(),function(dato){
                     if(dato === 'Datos incorrectos!'){
                         jQuery('#fancybox-content #loginUsuario').html(dato);
-                    }else if(dato === 'correcto'){
-                       jQuery.fancybox.close(); 
+                    }else if(dato != ''){
+                       USER = dato;
+                       loginUser.uLogin(dato);
+                       jQuery.fancybox.close();
                     }
                });
                
