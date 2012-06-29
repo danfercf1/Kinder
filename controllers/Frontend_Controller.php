@@ -310,7 +310,7 @@ class Frontend_Controller extends FD_Management
      * @param $alto
      */
     function resize_images($archivo, $ancho, $alto){
-        
+
         $file_name= IMAGES_PATH."sorpresas/".$archivo;
         $image = new imagedit($file_name);
         $image->setResize($ancho,$alto,false);

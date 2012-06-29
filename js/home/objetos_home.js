@@ -4,7 +4,6 @@ var arbol = new function()
           
      this.url = "images/images_home/arbol.png";
      
-     /*var preload = new Bitmap("images/preload/preload2.jpg");*/
      var nube10 = new Bitmap("images/preload/nube10.png");
      var nube20 = new Bitmap("images/preload/nube20.png");
      var nube30 = new Bitmap("images/preload/nube30.png");
@@ -23,8 +22,11 @@ var arbol = new function()
     {
         
         stage.addChild(arbol.obj);        
-        arbol.init_fondo();       
-                
+
+        arbol.init_fondo();
+
+
+
         this.resize();
     
     }
@@ -43,15 +45,101 @@ var arbol = new function()
         
         s.y = 40;
         
-        arbol.obj.addChild(s);
+        arbol.obj.addChildAt(s,0);
         
     }
+
+
        
     this.resize = function()
     {        
         arbol.obj.x = (canvas_home.width/2) - 180;         
         arbol.obj.y = (canvas_home.height/2) - 136;
     }
+};
+
+var sorpresas_arbol = new function(){
+
+    this.obj1 = new Container();
+
+    this.obj2 = new Container();
+
+    this.obj3 = new Container();
+
+    this.obj4 = new Container();
+
+    this.init = function(){
+        this.initAddPag(0);
+    }
+
+    this.initAddSurpriseOnce = function(img,pos){
+
+        stage.clear();
+        stage.update();
+
+        var s = new Bitmap(img);
+
+        switch(pos){
+            case 0:
+                stage.addChild(sorpresas_arbol.obj1);
+                sorpresas_arbol.obj1.x = 780;
+                sorpresas_arbol.obj1.y = 425;
+                sorpresas_arbol.obj1.addChild(s);
+                break;
+            case 1:
+                stage.addChild(sorpresas_arbol.obj2);
+                sorpresas_arbol.obj2.x = 835;
+                sorpresas_arbol.obj2.y = 490;
+                sorpresas_arbol.obj2.addChild(s);
+                break;
+            case 2:
+                stage.addChild(sorpresas_arbol.obj3);
+                sorpresas_arbol.obj3.x = 1060;
+                sorpresas_arbol.obj3.y = 520;
+                sorpresas_arbol.obj3.addChild(s);
+                break;
+            case 3:
+                stage.addChild(sorpresas_arbol.obj4);
+                sorpresas_arbol.obj4.x = 1030;
+                sorpresas_arbol.obj4.y = 590;
+                sorpresas_arbol.obj4.addChild(s);
+                break;
+        }
+
+    }
+
+    this.initAddPag = function(pagina, iteracion){
+
+        var i = 0;
+        var iteracion;
+
+        if(iteracion == 0 || iteracion == null || iteracion =='undefined')
+        {
+            iteracion = 4;
+        }else{
+            iteracion = iteracion;
+        }
+
+        jQuery.get('loginFrontend/retrieveSurprises/'+pagina+'/'+iteracion, function(data){
+
+            if(data != ''){
+                for(i; i<iteracion; i++){
+                    sorpresas_arbol.initAddSurpriseOnce(ROOT_PATH+"frontend/resize_images/"+data[i]['IMAGEN_SORPRESA']+"/100/85",i);
+                }
+            }
+        },'json');
+    }
+
+    this.initRemoveSurprises = function(){
+        var i = 0;
+        for(i; i<4; i++){
+            sorpresas_arbol.obj1.removeAllChildren();
+            sorpresas_arbol.obj2.removeAllChildren();
+            sorpresas_arbol.obj3.removeAllChildren();
+            sorpresas_arbol.obj4.removeAllChildren();
+        }
+    }
+
 }
 
 
@@ -1427,26 +1515,27 @@ var placa_usuario = new function(){
     }
 
     this.initCantidadSorpresas = function(){
+        this.cantTotal;
+        stage.clear();
+        stage.update();
 
         jQuery.post('loginFrontend/retrieveQsurprises',function(data){
 
-            var q = jQuery.parseJSON(data);
-
-            console.log(q);
-
-            var texto =  new Text (q.cantidad+'/35', 'Bold 25px Arial' , '#f26529');
+            var texto =  new Text (data[0].cantidad+'/'+data[1].total, 'Bold 25px Arial' , '#f26529');
 
             texto.maxWidth = 60;
 
             var s = new Shape(texto);
 
-            s.x = 297;
+            s.x = 298;
 
             s.y = 84;
 
-            placa_usuario.obj.addChild(s);
-        });
+            placa_usuario.obj.addChildAt(s,1);
+        },'json');
     }
+
+
 
     this.resize = function()
     {

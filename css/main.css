@@ -628,49 +628,25 @@ ul, li {
 ****Estilos registro
 ***/
 
-#content_registro{
-    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
-    /*display: inline-block;*/
-    height: 540px;
-    overflow: hidden;
-    padding: 200px 0 0;
-    width: 610px;
-}
-
-#content_registro #titulo{
-    background: url("../images/registro/btnLabel.png") no-repeat scroll center center transparent;
-    color: #00C2C4;
-    display: block;
-    font-family: Arial Rounded MT Bold;
-    font-size: 55px;
-    height: 68px;
-    left: 147px;
-    position: absolute;
-    text-align: center;
-    top: 227px;
-    width: 336px;
-}
-
-#content_registro #form_registro #lista_formulario{
-    overflow: hidden;
-    padding: 138px 110px 0 0;
-    text-align: right;
-}
-
 #content_registro #form_registro #lista_formulario li{
-    margin: 0 0 8px 10px;
+    margin: 0 0 8px;
     overflow: hidden;
+}
+.form_registro{
+    padding: 40px 60px 0 75px;
 }
 
 #content_registro #form_registro #lista_formulario .etiqueta_flecha{
-    
+
     background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
     color: #08A8C0;
+    float: left;
     font-family: Arial Rounded MT Bold;
     font-size: 15px;
     font-weight: bold;
-    padding-left: 20px;
     margin-right: 5px;
+    padding-left: 20px;
+    width: 214px;
 }
 
 
@@ -689,7 +665,6 @@ ul, li {
 #content_registro #lista_formulario .mensaje_activacion{
     color: #DA4720;
     font-family: Arial Rounded MT Bold;
-    padding: 0 0 0 90px;
     text-align: justify;
 }
 
@@ -700,7 +675,7 @@ ul, li {
     height: 88px;
     left: 516px;
     position: absolute;
-    top: 551px;
+    top: 455px;
     width: 90px;
 }
 
@@ -720,7 +695,7 @@ ul, li {
     background: url("../images/registro/btnClose.png") no-repeat scroll center center transparent;
     height: 51px;
     right: 78px;
-    top: 139px;
+    top: 39px;
     width: 35px;
     z-index: 1103;
 }
@@ -729,43 +704,45 @@ ul, li {
 ****Estilos Login
 ***/
 
-#content_login{
+.content_login{
     background: url("../images/registro/background.png") no-repeat scroll center center transparent;
     display: block;
     height: 540px;
     margin: 0 auto;
     overflow: hidden;
-    padding: 200px 0 0;
+    padding: 0;
     position: relative;
     width: 610px;
 }
 
-#content_login #titulo{
+.content_login .wrap_login{
+    padding: 120px 0 0 20px;
+}
+
+.content_login .wrap_login .titulo{
     background: url("../images/registro/btnLabel.png") no-repeat scroll center center transparent;
-    color: #2ed2d4;
+    color: #2ED2D4;
     display: block;
     font-family: Arial Rounded MT Bold;
     font-size: 51px;
     height: 68px;
-    left: 150px;
-    position: absolute;
+    position: relative;
     text-align: center;
-    top: 225px;
-    width: 336px;
-    
+}
+.content_login .wrap_login .form_login{
+    padding: 40px 60px 0 110px;
 }
 
-#content_login #form_login #lista_formulario{
-    overflow: hidden;
-    padding: 140px 60px 0 130px;
+.content_login .wrap_login #form_login #lista_formulario{
+
 }
 
-#content_login #form_login #lista_formulario li{
+.content_login .wrap_login #form_login #lista_formulario li{
     margin: 0 0 8px 10px;
     overflow: hidden;
 }
 
-#content_login #form_login #lista_formulario label{
+.content_login .wrap_login #form_login #lista_formulario label{
 
     color: #08A8C0;
     font-family: Arial Rounded MT Bold;
@@ -775,7 +752,7 @@ ul, li {
 }
 
 
-#content_login #form_login #lista_formulario input{
+.content_login .wrap_login #form_login #lista_formulario input{
     background: url("../images/registro/bgTextfield.jpg") repeat-x scroll 0 0 transparent;
     border: medium none;
     border-radius: 23px 23px 23px 23px;
@@ -790,14 +767,20 @@ ul, li {
     width: 200px;
 }
 
+.content_login .wrap_login #form_login .link_bottom{
+    display: block;
+    float: left;
+    padding-left: 30px;
+    position: relative;
+    width: 235px;
+}
 
-#content_login #form_login .links{
+.content_login .wrap_login #form_login .link_bottom .links{
     background: url("../images/registro/flecha.png") no-repeat scroll 0 center transparent;
     color: #F8442B;
     cursor: pointer;
     font-family: Arial Rounded MT Bold;
     font-size: 18px;
-    margin-left: 148px;
     padding: 0 0 0 24px;
 }
 
@@ -813,7 +796,7 @@ ul, li {
     width: 59px;
 }
 
-#content_login .login_correcto{
+.content_login .login_correcto{
     
 }
 
@@ -821,7 +804,7 @@ ul, li {
 ****Estilos Gracias
 ***/
 
-#content_gracias{
+/*#content_gracias{
 
     background: url("../images/registro/background.png") no-repeat scroll center center transparent;
     height: 540px;
@@ -830,19 +813,19 @@ ul, li {
     padding: 200px 0 0;
     width: 610px;
 }
-
+*/
 #content_gracias .tituloGracias{
     background: url("../images/registro/bgTitle.png") repeat-x scroll 0 0 transparent;
     border-radius: 45px 45px 45px 45px;
     display: block;
     height: 45px;
-    margin: 20px auto;
+    margin: 3px auto;
     padding-top: 18px;
     position: relative;
     width: 339px;
 }
 
-#content_gracias .tituloGracias .titulo_grande{
+.titulo_grande{
 
     color: #FFCC02;
     display: block;
@@ -855,7 +838,7 @@ ul, li {
        
 }
 
-#content_gracias .tituloGracias .titulo_pequeno{
+.titulo_pequeno{
     color: #08A8C0;
     display: block;
     font-family: Arial Rounded MT Bold;
@@ -888,6 +871,7 @@ ul, li {
 }
 
 .error_registro{
+    clear: both;
     color: #FF0000;
     display: block;
     font-family: Arial Rounded MT Bold;
@@ -902,33 +886,6 @@ ul, li {
 ****Estilos Carga codigo
 ***/
 
-#content_codigo{
-    background: url("../images/registro/background.png") no-repeat scroll center center transparent;
-    display: block;
-    height: 540px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 200px 0 0;
-    position: relative;
-    width: 610px;
-}
-
-#content_codigo #titulo{
-    background: url("../images/registro/btnLabel.png") no-repeat scroll center center transparent;
-    color: #2ED2D4;
-    display: block;
-    font-family: Arial Rounded MT Bold;
-    font-size: 32px;
-    height: 68px;
-    left: 150px;
-    padding-top: 17px;
-    position: absolute;
-    text-align: center;
-    top: 215px;
-    width: 336px;
-
-}
-
 #content_codigo #form_codigo{
     overflow: hidden;
 }
@@ -936,7 +893,7 @@ ul, li {
 #content_codigo #form_codigo #lista_formulario{
     display: block;
     margin: 0 auto;
-    padding: 185px 0 0;
+    padding: 95px 0 0;
     position: relative;
     width: 400px;
 }
@@ -971,6 +928,25 @@ ul, li {
     padding: 0 10px;
     position: relative;
     width: 200px;
+}
+
+/**
+ * Estilos carga codigo completo
+ */
+.content_completo{
+    background: url("../images/registro/flecha.png") no-repeat scroll 12% 70% transparent;
+    color: #E87100;
+    display: block;
+    font-family: Arial Rounded MT Bold;
+    font-size: 35px;
+    margin: 0 auto;
+    padding: 104px 0 0;
+    position: relative;
+    text-align: center;
+    width: 480px;
+}
+.correcto_completo{
+
 }
 
 

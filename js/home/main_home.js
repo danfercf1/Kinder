@@ -53,6 +53,9 @@ function init_home()
         animacion_home.puntero_obj(placa_usuario.btnLoadImg);
         animacion_home.cerrarSesion(placa_usuario.logoutImg);
         animacion_home.obj_fancy(placa_usuario.btnLoadImg,'LoginFrontend/loadCode');
+        animacion_home.botones(cursor_derecha.obj);
+        animacion_home.botones(cursor_izquierda.obj);
+        sorpresas_arbol.init();
     }else{
         registrate.init();
     }

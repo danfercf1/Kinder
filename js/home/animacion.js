@@ -1,7 +1,11 @@
 var animacion_home = new function()
-{   
+{
+    this.index = 0;
     this.objeto = null;
-   
+    this.cantidad = null;
+    this.paginaFinal = null;
+    this.iteracion =  null;
+
    // animacion.horizontal(pecesamarillos3,1200,13,0);
 
     this.horizontal = function(objeto,x0,t,tipoeasing)
@@ -666,14 +670,85 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
             .to({alpha: 0}, t*1000)
             .to({alpha: alfa}, t*1000)
     }
-    
-    
+
+    /**
+     *
+     * @param obj
+     */
+
     this.botones = function(obj){
-        
+
         obj.onClick = function(evt){
-            
-             console.log(obj);
+            jQuery.post('loginFrontend/retrieveQsurprises', function(data){
+
+                animacion_home.cantidad = data[0].cantidad;
+
+                animacion_home.paginaFinal = Math.floor(animacion_home.cantidad/4);
+
+                if(animacion_home.cantidad % 4 != 0){
+                    animacion_home.paginaFinal =  animacion_home.paginaFinal+1;
+                }else{
+                    animacion_home.paginaFinal =  animacion_home.paginaFinal;
+                }
+
+            if(obj.name == "der"){
+
+                if(animacion_home.index+1 < animacion_home.paginaFinal){
+
+                    animacion_home.index++;
+
+                }else{
+
+                    animacion_home.index = 0;
+
+                }
+
+                if(animacion_home.cantidad != 0 && animacion_home.cantidad != ''){
+                    if(animacion_home.index === animacion_home.paginaFinal-1){
+                        animacion_home.iteracion = animacion_home.cantidad % 4;
+
+                    }else{
+                        animacion_home.iteracion = 4;
+                    }
+                    sorpresas_arbol.initRemoveSurprises();
+                    sorpresas_arbol.initAddPag(animacion_home.index, animacion_home.iteracion);
+                }else{
+
+                }
+
+            }
+
+            if(obj.name == "izq"){
+
+                if(animacion_home.index > 0){
+
+                    animacion_home.index--;
+
+                }else{
+                    animacion_home.index = animacion_home.paginaFinal-1;
+
+                }
+
+                if(animacion_home.index < 0){
+                    animacion_home.index = Math.floor(animacion_home.paginaFinal);
+                }
+
+                 if(animacion_home.cantidad != 0 && animacion_home.cantidad != ''){
+                     if(animacion_home.index === animacion_home.paginaFinal-1){
+                         animacion_home.iteracion = animacion_home.cantidad % 4;
+
+                     }else{
+                         animacion_home.iteracion = 4;
+                     }
+                     sorpresas_arbol.initRemoveSurprises();
+                     sorpresas_arbol.initAddPag(animacion_home.index, animacion_home.iteracion);
+                 }else{
+
+                 }
+            }
+            },'json');
         }
+
     }
     
     
@@ -784,7 +859,7 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
     this.cerrarSesion = function(obj){
 
         obj.onClick = function(evt){
-            jQuery.post('loginfrontend/logout',function(){
+            jQuery.post('loginFrontend/logout',function(){
                 location.href = '/';
             });
         }
