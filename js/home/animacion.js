@@ -704,7 +704,7 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                 }
 
                 if(animacion_home.cantidad != 0 && animacion_home.cantidad != ''){
-                    if(animacion_home.index === animacion_home.paginaFinal-1){
+                    if(animacion_home.index == animacion_home.paginaFinal-1){
                         animacion_home.iteracion = animacion_home.cantidad % 4;
 
                     }else{
@@ -734,7 +734,7 @@ this.mover_soy_padre = function(objeto,x0,y0,t,w,tipoeasing)
                 }
 
                  if(animacion_home.cantidad != 0 && animacion_home.cantidad != ''){
-                     if(animacion_home.index === animacion_home.paginaFinal-1){
+                     if(animacion_home.index == animacion_home.paginaFinal-1){
                          animacion_home.iteracion = animacion_home.cantidad % 4;
 
                      }else{

@@ -19,7 +19,7 @@
 </section>
 
 <script>
-
+    var iteracion= null;
     jQuery(function(){
         jQuery('#form_codigo').validate({errorClass: "error_validregistro"});
         jQuery('#form_codigo').submit(function(){
@@ -34,7 +34,26 @@
                         stage.update();
                         placa_usuario.initCantidadSorpresas();
                         sorpresas_arbol.initRemoveSurprises();
-                        sorpresas_arbol.initAddPag(0, 4);
+                        jQuery.post('loginFrontend/retrieveQsurprises', function(data){
+
+                            var cantidad = data[0].cantidad;
+                            if(cantidad == 0){
+                                iteracion = 0;
+                            }
+                            else if(cantidad == 1){
+                                iteracion = 1;
+                            }else if(cantidad == 2){
+                                iteracion = 2;
+                            }else if(cantidad == 3){
+                                iteracion = 3;
+                            }else{
+                                iteracion = 4;
+                            }
+                            sorpresas_arbol.initAddPag(0, iteracion);
+                        },'json');
+
+                        animacion_home.botones(cursor_derecha.obj);
+                        animacion_home.botones(cursor_izquierda.obj);
                     }
                 });
 

@@ -69,7 +69,24 @@ var sorpresas_arbol = new function(){
     this.obj4 = new Container();
 
     this.init = function(){
-        this.initAddPag(0);
+        var iteracion = null;
+        jQuery.post('loginFrontend/retrieveQsurprises', function(data){
+
+            var cantidad = data[0].cantidad;
+
+            if(cantidad == 0){
+                iteracion = 0;
+            }else if(cantidad == 1){
+                iteracion = 1;
+            }else if(cantidad == 2){
+                iteracion = 2;
+            }else if(cantidad == 3){
+                iteracion = 3;
+            }else{
+                iteracion = 4;
+            }
+            sorpresas_arbol.initAddPag(0, iteracion);
+        },'json');
     }
 
     this.initAddSurpriseOnce = function(img,pos){
@@ -111,11 +128,11 @@ var sorpresas_arbol = new function(){
     this.initAddPag = function(pagina, iteracion){
 
         var i = 0;
-        var iteracion;
 
-        if(iteracion == 0 || iteracion == null || iteracion =='undefined')
+        if(iteracion == null || iteracion =='undefined')
         {
             iteracion = 4;
+
         }else{
             iteracion = iteracion;
         }
